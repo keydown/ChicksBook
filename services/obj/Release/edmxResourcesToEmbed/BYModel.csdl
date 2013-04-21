@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BYModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="BYEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Animals" EntityType="BYModel.Animal" />
+    <EntitySet Name="Assets" EntityType="BYModel.Asset" />
+    <EntitySet Name="BirdVets" EntityType="BYModel.BirdVet" />
+    <EntitySet Name="Calendars" EntityType="BYModel.Calendar" />
+    <EntitySet Name="ChickenLaws" EntityType="BYModel.ChickenLaw" />
+    <EntitySet Name="ChickenLawsPropers" EntityType="BYModel.ChickenLawsProper" />
+    <EntitySet Name="Events" EntityType="BYModel.Event" />
+    <EntitySet Name="PetShops" EntityType="BYModel.PetShop" />
+    <EntitySet Name="PetShopsWorkingHours" EntityType="BYModel.PetShopsWorkingHour" />
+    <EntitySet Name="Tasks" EntityType="BYModel.Task" />
+    <EntitySet Name="TempZipCodes" EntityType="BYModel.TempZipCode" />
+    <EntitySet Name="Trainings" EntityType="BYModel.Training" />
+    <EntitySet Name="UserAssets" EntityType="BYModel.UserAsset" />
+    <EntitySet Name="UserAssetsHistories" EntityType="BYModel.UserAssetsHistory" />
+    <EntitySet Name="UserFarms" EntityType="BYModel.UserFarm" />
+    <EntitySet Name="UserFarmHistories" EntityType="BYModel.UserFarmHistory" />
+    <EntitySet Name="Users" EntityType="BYModel.User" />
+    <EntitySet Name="UserTrainings" EntityType="BYModel.UserTraining" />
+    <EntitySet Name="Vets" EntityType="BYModel.Vet" />
+    <EntitySet Name="WeatherForecasts" EntityType="BYModel.WeatherForecast" />
+    <EntitySet Name="ZipCodes" EntityType="BYModel.ZipCode" />
+    <AssociationSet Name="FK_UserFarm_Animals" Association="BYModel.FK_UserFarm_Animals">
+      <End Role="Animal" EntitySet="Animals" />
+      <End Role="UserFarm" EntitySet="UserFarms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserFarmHistory_Animals" Association="BYModel.FK_UserFarmHistory_Animals">
+      <End Role="Animal" EntitySet="Animals" />
+      <End Role="UserFarmHistory" EntitySet="UserFarmHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Assets_Users" Association="BYModel.FK_Assets_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Asset" EntitySet="Assets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserAssets_Assets" Association="BYModel.FK_UserAssets_Assets">
+      <End Role="Asset" EntitySet="Assets" />
+      <End Role="UserAsset" EntitySet="UserAssets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserAssetsHistory_Assets" Association="BYModel.FK_UserAssetsHistory_Assets">
+      <End Role="Asset" EntitySet="Assets" />
+      <End Role="UserAssetsHistory" EntitySet="UserAssetsHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Calendar_Tasks" Association="BYModel.FK_Calendar_Tasks">
+      <End Role="Task" EntitySet="Tasks" />
+      <End Role="Calendar" EntitySet="Calendars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Calendar_Users" Association="BYModel.FK_Calendar_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Calendar" EntitySet="Calendars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tasks_Users" Association="BYModel.FK_Tasks_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Task" EntitySet="Tasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserTrainings_Trainings" Association="BYModel.FK_UserTrainings_Trainings">
+      <End Role="Training" EntitySet="Trainings" />
+      <End Role="UserTraining" EntitySet="UserTrainings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserAssets_Users" Association="BYModel.FK_UserAssets_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserAsset" EntitySet="UserAssets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserAssetsHistory_Users" Association="BYModel.FK_UserAssetsHistory_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserAssetsHistory" EntitySet="UserAssetsHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserFarm_Users" Association="BYModel.FK_UserFarm_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserFarm" EntitySet="UserFarms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserFarmHistory_Users" Association="BYModel.FK_UserFarmHistory_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserFarmHistory" EntitySet="UserFarmHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserTrainings_Users" Association="BYModel.FK_UserTrainings_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserTraining" EntitySet="UserTrainings" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Animal">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Breed" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Varieties" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Rarity" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Weight" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Class" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Origins" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EggsColor" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EggSize" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Comb" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SkinColor" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Earlobes" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Brooding" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Hardiness" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Maturing" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Behavior" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Picture" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Links" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="EggCost" />
+    <Property Type="Int32" Name="EggHatchingDays" />
+    <NavigationProperty Name="UserFarms" Relationship="BYModel.FK_UserFarm_Animals" FromRole="Animal" ToRole="UserFarm" />
+    <NavigationProperty Name="UserFarmHistories" Relationship="BYModel.FK_UserFarmHistory_Animals" FromRole="Animal" ToRole="UserFarmHistory" />
+  </EntityType>
+  <EntityType Name="Asset">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="Cost" />
+    <Property Type="Int32" Name="AddedByUser" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="BYModel.FK_Assets_Users" FromRole="Asset" ToRole="User" />
+    <NavigationProperty Name="UserAssets" Relationship="BYModel.FK_UserAssets_Assets" FromRole="Asset" ToRole="UserAsset" />
+    <NavigationProperty Name="UserAssetsHistories" Relationship="BYModel.FK_UserAssetsHistory_Assets" FromRole="Asset" ToRole="UserAssetsHistory" />
+  </EntityType>
+  <EntityType Name="BirdVet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Zip" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ClinicName" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="City" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="State" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Calendar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="Date" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="TaskId" Nullable="false" />
+    <Property Type="Boolean" Name="TaskCompleted" Nullable="false" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <NavigationProperty Name="Task" Relationship="BYModel.FK_Calendar_Tasks" FromRole="Calendar" ToRole="Task" />
+    <NavigationProperty Name="User" Relationship="BYModel.FK_Calendar_Users" FromRole="Calendar" ToRole="User" />
+  </EntityType>
+  <EntityType Name="ChickenLaw">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Location" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AreChickensAllowed" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ChickensAllowed" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RoostersAllowed" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PermitRequired" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CoopRestrictions" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Contacts" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Info" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Link" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastUpdate" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ChickenLawsProper">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Location" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AreChickensAllowed" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ChickensAllowed" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RoostersAllowed" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PermitRequired" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CoopRestrictions" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Contacts" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Info" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Link" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastUpdate" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Link" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Date" Precision="3" />
+  </EntityType>
+  <EntityType Name="PetShop">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Zip" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="Latitude" />
+    <Property Type="Double" Name="Longitude" />
+    <Property Type="String" Name="MonStart" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MonEnd" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TueStart" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TueEnd" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WedStart" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WedEnd" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ThuStart" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ThuEnd" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FriStart" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FriEnd" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SatStart" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SatEnd" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SunStart" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SunEnd" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PetShopsWorkingHour">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="MondayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MondayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TuesdayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WednesdayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ThursdayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FridayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SaturdayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SundayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TuesdayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WednesdayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ThursdayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FridayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SaturdayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SundayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Task">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="DateTime" Name="DateAdded" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Calendars" Relationship="BYModel.FK_Calendar_Tasks" FromRole="Task" ToRole="Calendar" />
+    <NavigationProperty Name="User" Relationship="BYModel.FK_Tasks_Users" FromRole="Task" ToRole="User" />
+  </EntityType>
+  <EntityType Name="TempZipCode">
+    <Key>
+      <PropertyRef Name="Zip" />
+    </Key>
+    <Property Type="String" Name="Zip" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="State" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="County" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="Double" Name="Latitude" />
+    <Property Type="Double" Name="Longitude" />
+    <Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Parsed" />
+  </EntityType>
+  <EntityType Name="Training">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UserTrainings" Relationship="BYModel.FK_UserTrainings_Trainings" FromRole="Training" ToRole="UserTraining" />
+  </EntityType>
+  <EntityType Name="UserAsset">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="Int32" Name="AssetId" Nullable="false" />
+    <Property Type="Double" Name="CurrentQuantity" Nullable="false" />
+    <NavigationProperty Name="Asset" Relationship="BYModel.FK_UserAssets_Assets" FromRole="UserAsset" ToRole="Asset" />
+    <NavigationProperty Name="User" Relationship="BYModel.FK_UserAssets_Users" FromRole="UserAsset" ToRole="User" />
+  </EntityType>
+  <EntityType Name="UserAssetsHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="Int32" Name="AssetId" Nullable="false" />
+    <Property Type="String" Name="AssetStatus" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="ActionDate" Nullable="false" Precision="3" />
+    <Property Type="Double" Name="AssetPrice" Nullable="false" />
+    <Property Type="Double" Name="AssetCount" Nullable="false" />
+    <NavigationProperty Name="Asset" Relationship="BYModel.FK_UserAssetsHistory_Assets" FromRole="UserAssetsHistory" ToRole="Asset" />
+    <NavigationProperty Name="User" Relationship="BYModel.FK_UserAssetsHistory_Users" FromRole="UserAssetsHistory" ToRole="User" />
+  </EntityType>
+  <EntityType Name="UserFarm">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="Int32" Name="PetId" Nullable="false" />
+    <Property Type="Int32" Name="PetCount" Nullable="false" />
+    <Property Type="Int32" Name="EggsInStock" Nullable="false" />
+    <Property Type="Int32" Name="EggsHatching" Nullable="false" />
+    <NavigationProperty Name="Animal" Relationship="BYModel.FK_UserFarm_Animals" FromRole="UserFarm" ToRole="Animal" />
+    <NavigationProperty Name="User" Relationship="BYModel.FK_UserFarm_Users" FromRole="UserFarm" ToRole="User" />
+  </EntityType>
+  <EntityType Name="UserFarmHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="Int32" Name="PetId" Nullable="false" />
+    <Property Type="Int32" Name="PetCount" />
+    <Property Type="DateTime" Name="ActionDate" Nullable="false" Precision="3" />
+    <Property Type="String" Name="PetStatus" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="Double" Name="PetPrice" />
+    <Property Type="Int32" Name="EggsStocked" />
+    <Property Type="Int32" Name="EggsHatching" />
+    <NavigationProperty Name="Animal" Relationship="BYModel.FK_UserFarmHistory_Animals" FromRole="UserFarmHistory" ToRole="Animal" />
+    <NavigationProperty Name="User" Relationship="BYModel.FK_UserFarmHistory_Users" FromRole="UserFarmHistory" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AuthCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SessionId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DateRegistered" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="LastLogin" Precision="3" />
+    <Property Type="String" Name="FirstName" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastName" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="LastLat" Nullable="false" />
+    <Property Type="Double" Name="LastLong" Nullable="false" />
+    <NavigationProperty Name="Assets" Relationship="BYModel.FK_Assets_Users" FromRole="User" ToRole="Asset" />
+    <NavigationProperty Name="Calendars" Relationship="BYModel.FK_Calendar_Users" FromRole="User" ToRole="Calendar" />
+    <NavigationProperty Name="Tasks" Relationship="BYModel.FK_Tasks_Users" FromRole="User" ToRole="Task" />
+    <NavigationProperty Name="UserAssets" Relationship="BYModel.FK_UserAssets_Users" FromRole="User" ToRole="UserAsset" />
+    <NavigationProperty Name="UserAssetsHistories" Relationship="BYModel.FK_UserAssetsHistory_Users" FromRole="User" ToRole="UserAssetsHistory" />
+    <NavigationProperty Name="UserFarms" Relationship="BYModel.FK_UserFarm_Users" FromRole="User" ToRole="UserFarm" />
+    <NavigationProperty Name="UserFarmHistories" Relationship="BYModel.FK_UserFarmHistory_Users" FromRole="User" ToRole="UserFarmHistory" />
+    <NavigationProperty Name="UserTrainings" Relationship="BYModel.FK_UserTrainings_Users" FromRole="User" ToRole="UserTraining" />
+  </EntityType>
+  <EntityType Name="UserTraining">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="Int32" Name="TrainingId" Nullable="false" />
+    <Property Type="DateTime" Name="DateCompleted" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Training" Relationship="BYModel.FK_UserTrainings_Trainings" FromRole="UserTraining" ToRole="Training" />
+    <NavigationProperty Name="User" Relationship="BYModel.FK_UserTrainings_Users" FromRole="UserTraining" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Vet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Zip" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="Longitude" />
+    <Property Type="Double" Name="Latitude" />
+    <Property Type="String" Name="State" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="WeatherForecast">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserId" />
+    <Property Type="DateTime" Name="Time" Precision="3" />
+    <Property Type="String" Name="Summary" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="Temperature" />
+    <Property Type="Double" Name="WindSpeed" />
+    <Property Type="Double" Name="WindBearing" />
+    <Property Type="Double" Name="CloudCover" />
+    <Property Type="Double" Name="Humidity" />
+    <Property Type="Double" Name="Pressure" />
+  </EntityType>
+  <EntityType Name="ZipCode">
+    <Key>
+      <PropertyRef Name="Zip" />
+    </Key>
+    <Property Type="String" Name="Zip" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="State" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="County" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="Double" Name="Latitude" />
+    <Property Type="Double" Name="Longitude" />
+    <Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_UserFarm_Animals">
+    <End Type="BYModel.Animal" Role="Animal" Multiplicity="1" />
+    <End Type="BYModel.UserFarm" Role="UserFarm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Animal">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserFarm">
+        <PropertyRef Name="PetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserFarmHistory_Animals">
+    <End Type="BYModel.Animal" Role="Animal" Multiplicity="1" />
+    <End Type="BYModel.UserFarmHistory" Role="UserFarmHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Animal">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserFarmHistory">
+        <PropertyRef Name="PetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Assets_Users">
+    <End Type="BYModel.User" Role="User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="BYModel.Asset" Role="Asset" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Asset">
+        <PropertyRef Name="AddedByUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserAssets_Assets">
+    <End Type="BYModel.Asset" Role="Asset" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="BYModel.UserAsset" Role="UserAsset" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asset">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserAsset">
+        <PropertyRef Name="AssetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserAssetsHistory_Assets">
+    <End Type="BYModel.Asset" Role="Asset" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="BYModel.UserAssetsHistory" Role="UserAssetsHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asset">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserAssetsHistory">
+        <PropertyRef Name="AssetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Calendar_Tasks">
+    <End Type="BYModel.Task" Role="Task" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="BYModel.Calendar" Role="Calendar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Task">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Calendar">
+        <PropertyRef Name="TaskId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Calendar_Users">
+    <End Type="BYModel.User" Role="User" Multiplicity="1" />
+    <End Type="BYModel.Calendar" Role="Calendar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Calendar">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tasks_Users">
+    <End Type="BYModel.User" Role="User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="BYModel.Task" Role="Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Task">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserTrainings_Trainings">
+    <End Type="BYModel.Training" Role="Training" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="BYModel.UserTraining" Role="UserTraining" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Training">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserTraining">
+        <PropertyRef Name="TrainingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserAssets_Users">
+    <End Type="BYModel.User" Role="User" Multiplicity="1" />
+    <End Type="BYModel.UserAsset" Role="UserAsset" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserAsset">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserAssetsHistory_Users">
+    <End Type="BYModel.User" Role="User" Multiplicity="1" />
+    <End Type="BYModel.UserAssetsHistory" Role="UserAssetsHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserAssetsHistory">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserFarm_Users">
+    <End Type="BYModel.User" Role="User" Multiplicity="1" />
+    <End Type="BYModel.UserFarm" Role="UserFarm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserFarm">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserFarmHistory_Users">
+    <End Type="BYModel.User" Role="User" Multiplicity="1" />
+    <End Type="BYModel.UserFarmHistory" Role="UserFarmHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserFarmHistory">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserTrainings_Users">
+    <End Type="BYModel.User" Role="User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="BYModel.UserTraining" Role="UserTraining" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserTraining">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

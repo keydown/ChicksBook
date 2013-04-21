@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>04/11/2013 21:33:37</publishTime>
+    </File>
+    <File Include="bin/BYServices.dll">
+      <publishTime>04/21/2013 11:28:52</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/17/2013 23:02:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/11/2013 21:33:35</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/11/2013 21:33:36</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>07/10/2012 22:52:12</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>04/11/2013 21:33:39</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.WebRequest.dll">
+      <publishTime>07/10/2012 22:52:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>04/11/2013 21:33:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>04/11/2013 21:33:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>04/11/2013 21:33:33</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>04/11/2013 21:33:31</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>04/11/2013 21:33:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>04/11/2013 21:33:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>04/11/2013 21:33:33</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>04/11/2013 21:33:34</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>04/11/2013 21:33:34</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>04/11/2013 21:33:34</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>04/11/2013 21:33:37</publishTime>
+    </File>
+    <File Include="BYModel.Context.tt">
+      <publishTime>04/11/2013 21:33:22</publishTime>
+    </File>
+    <File Include="BYModel.edmx.diagram">
+      <publishTime>04/20/2013 22:25:08</publishTime>
+    </File>
+    <File Include="BYModel.tt">
+      <publishTime>04/11/2013 21:33:23</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>04/11/2013 21:33:23</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/11/2013 21:33:23</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/17/2013 23:02:18</publishTime>
+    </File>
+    <File Include="ServicesList.txt">
+      <publishTime>04/11/2013 21:33:23</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>04/11/2013 21:33:25</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>04/11/2013 21:33:25</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>04/11/2013 21:33:25</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>04/11/2013 21:33:25</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>04/11/2013 21:33:25</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/21/2013 11:28:52</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
