@@ -1,0 +1,92 @@
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\GetVets.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\GetVets.pdb
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\Antlr3.Runtime.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\AspNet.ScriptManager.jQuery.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\DotNetOpenAuth.AspNet.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\DotNetOpenAuth.Core.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\DotNetOpenAuth.OAuth.Consumer.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\DotNetOpenAuth.OAuth.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\DotNetOpenAuth.OpenId.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\EntityFramework.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\Microsoft.ScriptManager.MSAjax.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\Microsoft.ScriptManager.WebForms.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\Microsoft.Web.Infrastructure.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\System.Web.Optimization.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\System.Web.Providers.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\WebGrease.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\EntityFramework.xml
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\DotNetOpenAuth.Core.xml
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\DotNetOpenAuth.OAuth.xml
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\DotNetOpenAuth.OAuth.Consumer.xml
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\DotNetOpenAuth.OpenId.xml
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\bin\DotNetOpenAuth.AspNet.xml
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\obj\Debug\GetVets.csprojResolveAssemblyReference.cache
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\obj\Debug\GetVets.dll
+c:\users\ina\documents\visual studio 2012\Projects\GetVets\GetVets\obj\Debug\GetVets.pdb
+C:\Users\Atanas\Desktop\GetVets\GetVets\obj\Debug\GetVets.csprojResolveAssemblyReference.cache
+C:\Users\Atanas\Desktop\GetVets\GetVets\obj\Debug\GetVets.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\GetVets.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\GetVets.pdb
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\Antlr3.Runtime.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\DotNetOpenAuth.Core.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\EntityFramework.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\System.Web.Optimization.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\System.Web.Providers.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\WebGrease.dll
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\EntityFramework.xml
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\DotNetOpenAuth.Core.xml
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Atanas\Desktop\GetVets\GetVets\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Atanas\Desktop\GetVets\GetVets\obj\Debug\GetVets.pdb
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\GetVets.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\GetVets.pdb
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\Antlr3.Runtime.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\DotNetOpenAuth.Core.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\EntityFramework.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\System.Web.Optimization.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\System.Web.Providers.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\WebGrease.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\EntityFramework.xml
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\DotNetOpenAuth.Core.xml
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Atanas\Desktop\GetLaws\GetVets\obj\Debug\GetVets.csprojResolveAssemblyReference.cache
+C:\Users\Atanas\Desktop\GetLaws\GetVets\obj\Debug\GetVets.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\obj\Debug\GetVets.pdb
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\Newtonsoft.Json.dll
+C:\Users\Atanas\Desktop\GetLaws\GetVets\bin\Newtonsoft.Json.xml

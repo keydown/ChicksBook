@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetVetsDoctorsInfo", "GetVetsDoctorsInfo\GetVetsDoctorsInfo.csproj", "{D3B975F6-163F-4C73-9BFC-60DC8AB1768A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3B975F6-163F-4C73-9BFC-60DC8AB1768A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3B975F6-163F-4C73-9BFC-60DC8AB1768A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3B975F6-163F-4C73-9BFC-60DC8AB1768A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3B975F6-163F-4C73-9BFC-60DC8AB1768A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

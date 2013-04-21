@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f490f6cadee748cd895c8f591aed2855" Name="Diagram1">
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.Asset" Width="1.5" PointX="10.751153373509251" PointY="7.3018692616847662" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.BirdVet" Width="1.5" PointX="6.2144107903420975" PointY="18.017139398500852" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.Calendar" Width="1.5" PointX="3.6089773474302969" PointY="18.953426548723797" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.ChickenLaw" Width="1.5" PointX="9.7040785298236081" PointY="31.578600495857465" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.PetShop" Width="1.5" PointX="4.7839826870635065" PointY="21.624441112216768" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.PetShopsWorkingHour" Width="1.5" PointX="7.18325086645002" PointY="10.190359984613192" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.Task" Width="1.5" PointX="5.7125936121272822" PointY="13.38124421862012" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.TempZipCode" Width="1.5" PointX="11.65071966296561" PointY="20.700622300012327" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.Training" Width="1.5" PointX="7.4565187410714655" PointY="16.954747133401572" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.UserAsset" Width="1.5" PointX="9.56289180813492" PointY="19.889860132657859" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.UserAssetsHistory" Width="1.5" PointX="9.4950084898131948" PointY="28.341684324825966" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.UserFarm" Width="1.5" PointX="10.147349841030012" PointY="7.4029105489155791" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.UserFarmHistory" Width="1.5" PointX="5.2967362931448667" PointY="13.179708367762951" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.User" Width="1.5" PointX="6.4933940891611366" PointY="14.616801149499045" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.UserTraining" Width="1.5" PointX="6.9525030399451513" PointY="7.1134258988841559" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.Vet" Width="1.5" PointX="8.83403667846417" PointY="14.603526584153775" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.VetsWorkingHour" Width="1.5" PointX="6.7809852728531625" PointY="28.6876142158581" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.ZipCode" Width="1.5" PointX="9.2173373835242067" PointY="26.156769854089603" />
+        <AssociationConnector Association="keydowno_backyard_farmerModel.FK_Assets_Users" />
+        <AssociationConnector Association="keydowno_backyard_farmerModel.FK_UserAssets_Assets" />
+        <AssociationConnector Association="keydowno_backyard_farmerModel.FK_UserAssetsHistory_Assets" />
+        <AssociationConnector Association="keydowno_backyard_farmerModel.FK_Calendar_Tasks" />
+        <AssociationConnector Association="keydowno_backyard_farmerModel.FK_Calendar_Users" />
+        <AssociationConnector Association="keydowno_backyard_farmerModel.FK_PetShopsWorkingHours_PetShops" />
+        <AssociationConnector Association="keydowno_backyard_farmerModel.FK_Tasks_Users" />
+        <AssociationConnector Association="keydowno_backyard_farmerModel.FK_UserTrainings_Trainings" />
+        <AssociationConnector Association="keydowno_backyard_farmerModel.FK_UserAssets_Users" />
+        <AssociationConnector Association="keydowno_backyard_farmerModel.FK_UserAssetsHistory_Users" />
+        <AssociationConnector Association="keydowno_backyard_farmerModel.FK_UserFarm_Users" />
+        <AssociationConnector Association="keydowno_backyard_farmerModel.FK_UserFarmHistory_Users" />
+        <AssociationConnector Association="keydowno_backyard_farmerModel.FK_UserTrainings_Users" />
+        <AssociationConnector Association="keydowno_backyard_farmerModel.FK_VetsWorkingHours_Vets" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

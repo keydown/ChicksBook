@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="468d19643e114f339748573a163d7581" Name="Diagram1" ZoomLevel="65">
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.BirdVet" Width="1.5" PointX="4.0787749905506026" PointY="7.9425196535617673" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.PetShop" Width="1.5" PointX="5.5215240891657418" PointY="15.383033819209334" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.PetShopsWorkingHour" Width="1.5" PointX="9.3065068634722881" PointY="18.410594829549357" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.Vet" Width="1.5" PointX="6.9681909005009519" PointY="24.096439581409303" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.VetsWorkingHour" Width="1.5" PointX="2.8660805629874022" PointY="6.5630609870716281" />
+        <AssociationConnector Association="keydowno_backyard_farmerModel.FK_PetShopsWorkingHours_PetShops" />
+        <AssociationConnector Association="keydowno_backyard_farmerModel.FK_VetsWorkingHours_Vets" />
+        <EntityTypeShape EntityType="keydowno_backyard_farmerModel.ZipCode" Width="1.5" PointX="1.6269298985725875" PointY="15.880259327534708" />
+        <AssociationConnector Association="keydowno_backyard_farmerModel.FK_Vets_ZipCode" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

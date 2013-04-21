@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="keydowno_backyard_farmerModelStoreContainer" CdmEntityContainer="keydowno_backyard_farmerEntities">
+    <EntitySetMapping Name="BirdVets">
+      <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.BirdVet">
+        <MappingFragment StoreEntitySet="BirdVets">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ClinicName" ColumnName="ClinicName" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChickenLaws">
+      <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.ChickenLaw">
+        <MappingFragment StoreEntitySet="ChickenLaws">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Town" ColumnName="Town" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="AreChickensAllowed" ColumnName="AreChickensAllowed" />
+          <ScalarProperty Name="ChickensAllowed" ColumnName="ChickensAllowed" />
+          <ScalarProperty Name="RoostersAllowed" ColumnName="RoostersAllowed" />
+          <ScalarProperty Name="PermitRequired" ColumnName="PermitRequired" />
+          <ScalarProperty Name="CoopRestrictions" ColumnName="CoopRestrictions" />
+          <ScalarProperty Name="Contacts" ColumnName="Contacts" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PetShops">
+      <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.PetShop">
+        <MappingFragment StoreEntitySet="PetShops">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PetShopsWorkingHours">
+      <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.PetShopsWorkingHour">
+        <MappingFragment StoreEntitySet="PetShopsWorkingHours">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MondayStartTime" ColumnName="MondayStartTime" />
+          <ScalarProperty Name="MondayEndTime" ColumnName="MondayEndTime" />
+          <ScalarProperty Name="TuesdayStartTime" ColumnName="TuesdayStartTime" />
+          <ScalarProperty Name="WednesdayStartTime" ColumnName="WednesdayStartTime" />
+          <ScalarProperty Name="ThursdayStartTime" ColumnName="ThursdayStartTime" />
+          <ScalarProperty Name="FridayStartTime" ColumnName="FridayStartTime" />
+          <ScalarProperty Name="SaturdayStartTime" ColumnName="SaturdayStartTime" />
+          <ScalarProperty Name="SundayStartTime" ColumnName="SundayStartTime" />
+          <ScalarProperty Name="TuesdayEndTime" ColumnName="TuesdayEndTime" />
+          <ScalarProperty Name="WednesdayEndTime" ColumnName="WednesdayEndTime" />
+          <ScalarProperty Name="ThursdayEndTime" ColumnName="ThursdayEndTime" />
+          <ScalarProperty Name="FridayEndTime" ColumnName="FridayEndTime" />
+          <ScalarProperty Name="SaturdayEndTime" ColumnName="SaturdayEndTime" />
+          <ScalarProperty Name="SundayEndTime" ColumnName="SundayEndTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TempZipCodes">
+      <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.TempZipCode">
+        <MappingFragment StoreEntitySet="TempZipCodes">
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="County" ColumnName="County" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Parsed" ColumnName="Parsed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vets">
+      <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.Vet">
+        <MappingFragment StoreEntitySet="Vets">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VetsWorkingHours">
+      <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.VetsWorkingHour">
+        <MappingFragment StoreEntitySet="VetsWorkingHours">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Monday" ColumnName="Monday" />
+          <ScalarProperty Name="Tuesday" ColumnName="Tuesday" />
+          <ScalarProperty Name="Wednesday" ColumnName="Wednesday" />
+          <ScalarProperty Name="Thursday" ColumnName="Thursday" />
+          <ScalarProperty Name="Friday" ColumnName="Friday" />
+          <ScalarProperty Name="Saturday" ColumnName="Saturday" />
+          <ScalarProperty Name="Sunday" ColumnName="Sunday" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZipCodes">
+      <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.ZipCode">
+        <MappingFragment StoreEntitySet="ZipCode">
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="County" ColumnName="County" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Parsed" ColumnName="Parsed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

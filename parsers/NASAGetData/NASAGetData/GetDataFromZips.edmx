@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="keydowno_backyard_farmerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="keydowno_backyard_farmerModelStoreContainer">
+          <EntitySet Name="BirdVets" EntityType="keydowno_backyard_farmerModel.Store.BirdVets" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="PetShops" EntityType="keydowno_backyard_farmerModel.Store.PetShops" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="PetShopsWorkingHours" EntityType="keydowno_backyard_farmerModel.Store.PetShopsWorkingHours" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="Vets" EntityType="keydowno_backyard_farmerModel.Store.Vets" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="VetsWorkingHours" EntityType="keydowno_backyard_farmerModel.Store.VetsWorkingHours" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="ZipCode" EntityType="keydowno_backyard_farmerModel.Store.ZipCode" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <AssociationSet Name="FK_PetShopsWorkingHours_PetShops" Association="keydowno_backyard_farmerModel.Store.FK_PetShopsWorkingHours_PetShops">
+            <End Role="PetShops" EntitySet="PetShops" />
+            <End Role="PetShopsWorkingHours" EntitySet="PetShopsWorkingHours" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Vets_ZipCode" Association="keydowno_backyard_farmerModel.Store.FK_Vets_ZipCode">
+            <End Role="ZipCode" EntitySet="ZipCode" />
+            <End Role="Vets" EntitySet="Vets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VetsWorkingHours_Vets" Association="keydowno_backyard_farmerModel.Store.FK_VetsWorkingHours_Vets">
+            <End Role="Vets" EntitySet="Vets" />
+            <End Role="VetsWorkingHours" EntitySet="VetsWorkingHours" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="BirdVets">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="ClinicName" Type="nvarchar" MaxLength="255" />
+          <Property Name="City" Type="nvarchar" MaxLength="255" />
+          <Property Name="State" Type="nvarchar" MaxLength="255" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="PetShops">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="Latitude" Type="float" />
+          <Property Name="Longitude" Type="float" />
+        </EntityType>
+        <EntityType Name="PetShopsWorkingHours">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="MondayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="MondayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="TuesdayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="WednesdayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="ThursdayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="FridayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="SaturdayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="SundayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="TuesdayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="WednesdayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="ThursdayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="FridayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="SaturdayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="SundayEndTime" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Vets">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="Longitude" Type="float" />
+          <Property Name="Latitude" Type="float" />
+          <Property Name="Image" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="VetsWorkingHours">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="MondayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="MondayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="TuesdayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="WednesdayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="ThursdayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="FridayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="SaturdayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="SundayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="TuesdayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="WednesdayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="ThursdayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="FridayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="SaturdayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="SundayEndTime" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="ZipCode">
+          <Key>
+            <PropertyRef Name="Zip" />
+          </Key>
+          <Property Name="Zip" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="State" Type="nvarchar" MaxLength="50" />
+          <Property Name="County" Type="nchar" MaxLength="10" />
+          <Property Name="Latitude" Type="float" />
+          <Property Name="Longitude" Type="float" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" />
+          <Property Name="Parsed" Type="bit" />
+        </EntityType>
+        <Association Name="FK_PetShopsWorkingHours_PetShops">
+          <End Role="PetShops" Type="keydowno_backyard_farmerModel.Store.PetShops" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PetShopsWorkingHours" Type="keydowno_backyard_farmerModel.Store.PetShopsWorkingHours" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PetShops">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PetShopsWorkingHours">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Vets_ZipCode">
+          <End Role="ZipCode" Type="keydowno_backyard_farmerModel.Store.ZipCode" Multiplicity="0..1" />
+          <End Role="Vets" Type="keydowno_backyard_farmerModel.Store.Vets" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ZipCode">
+              <PropertyRef Name="Zip" />
+            </Principal>
+            <Dependent Role="Vets">
+              <PropertyRef Name="Zip" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VetsWorkingHours_Vets">
+          <End Role="Vets" Type="keydowno_backyard_farmerModel.Store.Vets" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="VetsWorkingHours" Type="keydowno_backyard_farmerModel.Store.VetsWorkingHours" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Vets">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VetsWorkingHours">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="keydowno_backyard_farmerModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="keydowno_backyard_farmerEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="BirdVets" EntityType="keydowno_backyard_farmerModel.BirdVet" />
+          <EntitySet Name="PetShops" EntityType="keydowno_backyard_farmerModel.PetShop" />
+          <EntitySet Name="PetShopsWorkingHours" EntityType="keydowno_backyard_farmerModel.PetShopsWorkingHour" />
+          <EntitySet Name="Vets" EntityType="keydowno_backyard_farmerModel.Vet" />
+          <EntitySet Name="VetsWorkingHours" EntityType="keydowno_backyard_farmerModel.VetsWorkingHour" />
+          <AssociationSet Name="FK_PetShopsWorkingHours_PetShops" Association="keydowno_backyard_farmerModel.FK_PetShopsWorkingHours_PetShops">
+            <End Role="PetShop" EntitySet="PetShops" />
+            <End Role="PetShopsWorkingHour" EntitySet="PetShopsWorkingHours" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VetsWorkingHours_Vets" Association="keydowno_backyard_farmerModel.FK_VetsWorkingHours_Vets">
+            <End Role="Vet" EntitySet="Vets" />
+            <End Role="VetsWorkingHour" EntitySet="VetsWorkingHours" />
+          </AssociationSet>
+          <EntitySet Name="ZipCodes" EntityType="keydowno_backyard_farmerModel.ZipCode" />
+          <AssociationSet Name="FK_Vets_ZipCode" Association="keydowno_backyard_farmerModel.FK_Vets_ZipCode">
+            <End Role="ZipCode" EntitySet="ZipCodes" />
+            <End Role="Vet" EntitySet="Vets" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="BirdVet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Zip" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ClinicName" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="City" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="State" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PetShop">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Zip" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="Latitude" />
+          <Property Type="Double" Name="Longitude" />
+          <NavigationProperty Name="PetShopsWorkingHour" Relationship="keydowno_backyard_farmerModel.FK_PetShopsWorkingHours_PetShops" FromRole="PetShop" ToRole="PetShopsWorkingHour" />
+        </EntityType>
+        <EntityType Name="PetShopsWorkingHour">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="MondayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MondayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TuesdayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="WednesdayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ThursdayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FridayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SaturdayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SundayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TuesdayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="WednesdayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ThursdayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FridayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SaturdayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SundayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PetShop" Relationship="keydowno_backyard_farmerModel.FK_PetShopsWorkingHours_PetShops" FromRole="PetShopsWorkingHour" ToRole="PetShop" />
+        </EntityType>
+        <EntityType Name="Vet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Zip" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Phone" />
+          <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="Longitude" />
+          <Property Type="Double" Name="Latitude" />
+          <Property Type="String" Name="Image" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VetsWorkingHour" Relationship="keydowno_backyard_farmerModel.FK_VetsWorkingHours_Vets" FromRole="Vet" ToRole="VetsWorkingHour" />
+          <NavigationProperty Name="ZipCode" Relationship="keydowno_backyard_farmerModel.FK_Vets_ZipCode" FromRole="Vet" ToRole="ZipCode" />
+        </EntityType>
+        <EntityType Name="VetsWorkingHour">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="MondayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MondayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TuesdayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="WednesdayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ThursdayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FridayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SaturdayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SundayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TuesdayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="WednesdayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ThursdayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FridayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SaturdayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SundayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Vet" Relationship="keydowno_backyard_farmerModel.FK_VetsWorkingHours_Vets" FromRole="VetsWorkingHour" ToRole="Vet" />
+        </EntityType>
+        <Association Name="FK_PetShopsWorkingHours_PetShops">
+          <End Type="keydowno_backyard_farmerModel.PetShop" Role="PetShop" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="keydowno_backyard_farmerModel.PetShopsWorkingHour" Role="PetShopsWorkingHour" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PetShop">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PetShopsWorkingHour">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VetsWorkingHours_Vets">
+          <End Type="keydowno_backyard_farmerModel.Vet" Role="Vet" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="keydowno_backyard_farmerModel.VetsWorkingHour" Role="VetsWorkingHour" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Vet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VetsWorkingHour">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ZipCode">
+          <Key>
+            <PropertyRef Name="Zip" />
+          </Key>
+          <Property Type="String" Name="Zip" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="State" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="County" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="Double" Name="Latitude" />
+          <Property Type="Double" Name="Longitude" />
+          <Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Parsed" />
+          <NavigationProperty Name="Vets" Relationship="keydowno_backyard_farmerModel.FK_Vets_ZipCode" FromRole="ZipCode" ToRole="Vet" />
+        </EntityType>
+        <Association Name="FK_Vets_ZipCode">
+          <End Type="keydowno_backyard_farmerModel.ZipCode" Role="ZipCode" Multiplicity="0..1" />
+          <End Type="keydowno_backyard_farmerModel.Vet" Role="Vet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ZipCode">
+              <PropertyRef Name="Zip" />
+            </Principal>
+            <Dependent Role="Vet">
+              <PropertyRef Name="Zip" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="keydowno_backyard_farmerModelStoreContainer" CdmEntityContainer="keydowno_backyard_farmerEntities">
+          <EntitySetMapping Name="BirdVets">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.BirdVet">
+              <MappingFragment StoreEntitySet="BirdVets">
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="ClinicName" ColumnName="ClinicName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PetShops">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.PetShop">
+              <MappingFragment StoreEntitySet="PetShops">
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PetShopsWorkingHours">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.PetShopsWorkingHour">
+              <MappingFragment StoreEntitySet="PetShopsWorkingHours">
+                <ScalarProperty Name="SundayEndTime" ColumnName="SundayEndTime" />
+                <ScalarProperty Name="SaturdayEndTime" ColumnName="SaturdayEndTime" />
+                <ScalarProperty Name="FridayEndTime" ColumnName="FridayEndTime" />
+                <ScalarProperty Name="ThursdayEndTime" ColumnName="ThursdayEndTime" />
+                <ScalarProperty Name="WednesdayEndTime" ColumnName="WednesdayEndTime" />
+                <ScalarProperty Name="TuesdayEndTime" ColumnName="TuesdayEndTime" />
+                <ScalarProperty Name="SundayStartTime" ColumnName="SundayStartTime" />
+                <ScalarProperty Name="SaturdayStartTime" ColumnName="SaturdayStartTime" />
+                <ScalarProperty Name="FridayStartTime" ColumnName="FridayStartTime" />
+                <ScalarProperty Name="ThursdayStartTime" ColumnName="ThursdayStartTime" />
+                <ScalarProperty Name="WednesdayStartTime" ColumnName="WednesdayStartTime" />
+                <ScalarProperty Name="TuesdayStartTime" ColumnName="TuesdayStartTime" />
+                <ScalarProperty Name="MondayEndTime" ColumnName="MondayEndTime" />
+                <ScalarProperty Name="MondayStartTime" ColumnName="MondayStartTime" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vets">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.Vet">
+              <MappingFragment StoreEntitySet="Vets">
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VetsWorkingHours">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.VetsWorkingHour">
+              <MappingFragment StoreEntitySet="VetsWorkingHours">
+                <ScalarProperty Name="SundayEndTime" ColumnName="SundayEndTime" />
+                <ScalarProperty Name="SaturdayEndTime" ColumnName="SaturdayEndTime" />
+                <ScalarProperty Name="FridayEndTime" ColumnName="FridayEndTime" />
+                <ScalarProperty Name="ThursdayEndTime" ColumnName="ThursdayEndTime" />
+                <ScalarProperty Name="WednesdayEndTime" ColumnName="WednesdayEndTime" />
+                <ScalarProperty Name="TuesdayEndTime" ColumnName="TuesdayEndTime" />
+                <ScalarProperty Name="SundayStartTime" ColumnName="SundayStartTime" />
+                <ScalarProperty Name="SaturdayStartTime" ColumnName="SaturdayStartTime" />
+                <ScalarProperty Name="FridayStartTime" ColumnName="FridayStartTime" />
+                <ScalarProperty Name="ThursdayStartTime" ColumnName="ThursdayStartTime" />
+                <ScalarProperty Name="WednesdayStartTime" ColumnName="WednesdayStartTime" />
+                <ScalarProperty Name="TuesdayStartTime" ColumnName="TuesdayStartTime" />
+                <ScalarProperty Name="MondayEndTime" ColumnName="MondayEndTime" />
+                <ScalarProperty Name="MondayStartTime" ColumnName="MondayStartTime" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZipCodes">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.ZipCode">
+              <MappingFragment StoreEntitySet="ZipCode">
+                <ScalarProperty Name="Parsed" ColumnName="Parsed" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

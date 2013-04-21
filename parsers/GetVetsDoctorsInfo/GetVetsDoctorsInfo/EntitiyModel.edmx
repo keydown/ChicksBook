@@ -1,0 +1,1236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="keydowno_backyard_farmerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="keydowno_backyard_farmerModelStoreContainer">
+          <EntitySet Name="Assets" EntityType="keydowno_backyard_farmerModel.Store.Assets" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="BirdVets" EntityType="keydowno_backyard_farmerModel.Store.BirdVets" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="Calendar" EntityType="keydowno_backyard_farmerModel.Store.Calendar" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="ChickenLaws" EntityType="keydowno_backyard_farmerModel.Store.ChickenLaws" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="PetShops" EntityType="keydowno_backyard_farmerModel.Store.PetShops" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="PetShopsWorkingHours" EntityType="keydowno_backyard_farmerModel.Store.PetShopsWorkingHours" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="Tasks" EntityType="keydowno_backyard_farmerModel.Store.Tasks" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="TempZipCodes" EntityType="keydowno_backyard_farmerModel.Store.TempZipCodes" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="Trainings" EntityType="keydowno_backyard_farmerModel.Store.Trainings" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="UserAssets" EntityType="keydowno_backyard_farmerModel.Store.UserAssets" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="UserAssetsHistory" EntityType="keydowno_backyard_farmerModel.Store.UserAssetsHistory" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="UserFarm" EntityType="keydowno_backyard_farmerModel.Store.UserFarm" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="UserFarmHistory" EntityType="keydowno_backyard_farmerModel.Store.UserFarmHistory" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="Users" EntityType="keydowno_backyard_farmerModel.Store.Users" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="UserTrainings" EntityType="keydowno_backyard_farmerModel.Store.UserTrainings" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="Vets" EntityType="keydowno_backyard_farmerModel.Store.Vets" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="VetsWorkingHours" EntityType="keydowno_backyard_farmerModel.Store.VetsWorkingHours" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <EntitySet Name="ZipCode" EntityType="keydowno_backyard_farmerModel.Store.ZipCode" store:Type="Tables" Schema="keydowno_backyard_farmer" />
+          <AssociationSet Name="FK_Assets_Users" Association="keydowno_backyard_farmerModel.Store.FK_Assets_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Assets" EntitySet="Assets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Calendar_Tasks" Association="keydowno_backyard_farmerModel.Store.FK_Calendar_Tasks">
+            <End Role="Tasks" EntitySet="Tasks" />
+            <End Role="Calendar" EntitySet="Calendar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Calendar_Users" Association="keydowno_backyard_farmerModel.Store.FK_Calendar_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Calendar" EntitySet="Calendar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PetShopsWorkingHours_PetShops" Association="keydowno_backyard_farmerModel.Store.FK_PetShopsWorkingHours_PetShops">
+            <End Role="PetShops" EntitySet="PetShops" />
+            <End Role="PetShopsWorkingHours" EntitySet="PetShopsWorkingHours" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tasks_Users" Association="keydowno_backyard_farmerModel.Store.FK_Tasks_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Tasks" EntitySet="Tasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserAssets_Assets" Association="keydowno_backyard_farmerModel.Store.FK_UserAssets_Assets">
+            <End Role="Assets" EntitySet="Assets" />
+            <End Role="UserAssets" EntitySet="UserAssets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserAssets_Users" Association="keydowno_backyard_farmerModel.Store.FK_UserAssets_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserAssets" EntitySet="UserAssets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserAssetsHistory_Assets" Association="keydowno_backyard_farmerModel.Store.FK_UserAssetsHistory_Assets">
+            <End Role="Assets" EntitySet="Assets" />
+            <End Role="UserAssetsHistory" EntitySet="UserAssetsHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserAssetsHistory_Users" Association="keydowno_backyard_farmerModel.Store.FK_UserAssetsHistory_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserAssetsHistory" EntitySet="UserAssetsHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserFarm_Users" Association="keydowno_backyard_farmerModel.Store.FK_UserFarm_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserFarm" EntitySet="UserFarm" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserFarmHistory_Users" Association="keydowno_backyard_farmerModel.Store.FK_UserFarmHistory_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserFarmHistory" EntitySet="UserFarmHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserTrainings_Trainings" Association="keydowno_backyard_farmerModel.Store.FK_UserTrainings_Trainings">
+            <End Role="Trainings" EntitySet="Trainings" />
+            <End Role="UserTrainings" EntitySet="UserTrainings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserTrainings_Users" Association="keydowno_backyard_farmerModel.Store.FK_UserTrainings_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserTrainings" EntitySet="UserTrainings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VetsWorkingHours_Vets" Association="keydowno_backyard_farmerModel.Store.FK_VetsWorkingHours_Vets">
+            <End Role="Vets" EntitySet="Vets" />
+            <End Role="VetsWorkingHours" EntitySet="VetsWorkingHours" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Assets">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Cost" Type="float" />
+          <Property Name="AddedByUser" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BirdVets">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="ClinicName" Type="nvarchar" MaxLength="255" />
+          <Property Name="City" Type="nvarchar" MaxLength="255" />
+          <Property Name="State" Type="nvarchar" MaxLength="255" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Calendar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="TaskId" Type="int" Nullable="false" />
+          <Property Name="TaskCompleted" Type="bit" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChickenLaws">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Location" Type="nvarchar(max)" />
+          <Property Name="AreChickensAllowed" Type="nvarchar(max)" />
+          <Property Name="ChickensAllowed" Type="nvarchar(max)" />
+          <Property Name="RoostersAllowed" Type="nvarchar(max)" />
+          <Property Name="PermitRequired" Type="nvarchar(max)" />
+          <Property Name="CoopRestrictions" Type="nvarchar(max)" />
+          <Property Name="Contacts" Type="nvarchar(max)" />
+          <Property Name="Info" Type="nvarchar(max)" />
+          <Property Name="Link" Type="nvarchar(max)" />
+          <Property Name="LastUpdate" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="PetShops">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="Latitude" Type="float" />
+          <Property Name="Longitude" Type="float" />
+        </EntityType>
+        <EntityType Name="PetShopsWorkingHours">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="MondayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="MondayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="TuesdayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="WednesdayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="ThursdayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="FridayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="SaturdayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="SundayStartTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="TuesdayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="WednesdayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="ThursdayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="FridayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="SaturdayEndTime" Type="nvarchar" MaxLength="10" />
+          <Property Name="SundayEndTime" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Tasks">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="DateAdded" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TempZipCodes">
+          <Key>
+            <PropertyRef Name="Zip" />
+          </Key>
+          <Property Name="Zip" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="City" Type="nvarchar" MaxLength="255" />
+          <Property Name="State" Type="nvarchar" MaxLength="255" />
+          <Property Name="County" Type="nvarchar" MaxLength="255" />
+          <Property Name="Latitude" Type="float" />
+          <Property Name="Longitude" Type="float" />
+          <Property Name="Country" Type="nvarchar" MaxLength="255" />
+          <Property Name="Parsed" Type="bit" />
+        </EntityType>
+        <EntityType Name="Trainings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Text" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserAssets">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="AssetId" Type="int" Nullable="false" />
+          <Property Name="CurrentQuantity" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserAssetsHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="AssetId" Type="int" Nullable="false" />
+          <Property Name="AssetStatus" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="ActionDate" Type="datetime" Nullable="false" />
+          <Property Name="AssetPrice" Type="float" Nullable="false" />
+          <Property Name="AssetCount" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserFarm">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="PetId" Type="int" Nullable="false" />
+          <Property Name="PetCount" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserFarmHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="PetId" Type="int" Nullable="false" />
+          <Property Name="PetCount" Type="int" Nullable="false" />
+          <Property Name="ActionDate" Type="datetime" Nullable="false" />
+          <Property Name="PetStatus" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="PetPrice" Type="float" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="AuthCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SessionId" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateRegistered" Type="datetime" Nullable="false" />
+          <Property Name="LastLogin" Type="datetime" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="20" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UserTrainings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="TrainingId" Type="int" Nullable="false" />
+          <Property Name="DateCompleted" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Vets">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Longitude" Type="float" />
+          <Property Name="Latitude" Type="float" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="State" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="VetsWorkingHours">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Monday" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tuesday" Type="nvarchar" MaxLength="50" />
+          <Property Name="Wednesday" Type="nvarchar" MaxLength="50" />
+          <Property Name="Thursday" Type="nvarchar" MaxLength="50" />
+          <Property Name="Friday" Type="nvarchar" MaxLength="50" />
+          <Property Name="Saturday" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sunday" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ZipCode">
+          <Key>
+            <PropertyRef Name="Zip" />
+          </Key>
+          <Property Name="Zip" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="State" Type="nvarchar" MaxLength="50" />
+          <Property Name="County" Type="nchar" MaxLength="10" />
+          <Property Name="Latitude" Type="float" />
+          <Property Name="Longitude" Type="float" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" />
+          <Property Name="Parsed" Type="bit" />
+        </EntityType>
+        <Association Name="FK_Assets_Users">
+          <End Role="Users" Type="keydowno_backyard_farmerModel.Store.Users" Multiplicity="1" />
+          <End Role="Assets" Type="keydowno_backyard_farmerModel.Store.Assets" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Assets">
+              <PropertyRef Name="AddedByUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Calendar_Tasks">
+          <End Role="Tasks" Type="keydowno_backyard_farmerModel.Store.Tasks" Multiplicity="1" />
+          <End Role="Calendar" Type="keydowno_backyard_farmerModel.Store.Calendar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tasks">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Calendar">
+              <PropertyRef Name="TaskId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Calendar_Users">
+          <End Role="Users" Type="keydowno_backyard_farmerModel.Store.Users" Multiplicity="1" />
+          <End Role="Calendar" Type="keydowno_backyard_farmerModel.Store.Calendar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Calendar">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PetShopsWorkingHours_PetShops">
+          <End Role="PetShops" Type="keydowno_backyard_farmerModel.Store.PetShops" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PetShopsWorkingHours" Type="keydowno_backyard_farmerModel.Store.PetShopsWorkingHours" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PetShops">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PetShopsWorkingHours">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tasks_Users">
+          <End Role="Users" Type="keydowno_backyard_farmerModel.Store.Users" Multiplicity="1" />
+          <End Role="Tasks" Type="keydowno_backyard_farmerModel.Store.Tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tasks">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserAssets_Assets">
+          <End Role="Assets" Type="keydowno_backyard_farmerModel.Store.Assets" Multiplicity="1" />
+          <End Role="UserAssets" Type="keydowno_backyard_farmerModel.Store.UserAssets" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Assets">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserAssets">
+              <PropertyRef Name="AssetId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserAssets_Users">
+          <End Role="Users" Type="keydowno_backyard_farmerModel.Store.Users" Multiplicity="1" />
+          <End Role="UserAssets" Type="keydowno_backyard_farmerModel.Store.UserAssets" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserAssets">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserAssetsHistory_Assets">
+          <End Role="Assets" Type="keydowno_backyard_farmerModel.Store.Assets" Multiplicity="1" />
+          <End Role="UserAssetsHistory" Type="keydowno_backyard_farmerModel.Store.UserAssetsHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Assets">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserAssetsHistory">
+              <PropertyRef Name="AssetId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserAssetsHistory_Users">
+          <End Role="Users" Type="keydowno_backyard_farmerModel.Store.Users" Multiplicity="1" />
+          <End Role="UserAssetsHistory" Type="keydowno_backyard_farmerModel.Store.UserAssetsHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserAssetsHistory">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserFarm_Users">
+          <End Role="Users" Type="keydowno_backyard_farmerModel.Store.Users" Multiplicity="1" />
+          <End Role="UserFarm" Type="keydowno_backyard_farmerModel.Store.UserFarm" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserFarm">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserFarmHistory_Users">
+          <End Role="Users" Type="keydowno_backyard_farmerModel.Store.Users" Multiplicity="1" />
+          <End Role="UserFarmHistory" Type="keydowno_backyard_farmerModel.Store.UserFarmHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserFarmHistory">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserTrainings_Trainings">
+          <End Role="Trainings" Type="keydowno_backyard_farmerModel.Store.Trainings" Multiplicity="1" />
+          <End Role="UserTrainings" Type="keydowno_backyard_farmerModel.Store.UserTrainings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Trainings">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserTrainings">
+              <PropertyRef Name="TrainingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserTrainings_Users">
+          <End Role="Users" Type="keydowno_backyard_farmerModel.Store.Users" Multiplicity="1" />
+          <End Role="UserTrainings" Type="keydowno_backyard_farmerModel.Store.UserTrainings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserTrainings">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VetsWorkingHours_Vets">
+          <End Role="Vets" Type="keydowno_backyard_farmerModel.Store.Vets" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="VetsWorkingHours" Type="keydowno_backyard_farmerModel.Store.VetsWorkingHours" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Vets">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VetsWorkingHours">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="keydowno_backyard_farmerModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="keydowno_backyard_farmerEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Assets" EntityType="keydowno_backyard_farmerModel.Asset" />
+          <EntitySet Name="BirdVets" EntityType="keydowno_backyard_farmerModel.BirdVet" />
+          <EntitySet Name="Calendars" EntityType="keydowno_backyard_farmerModel.Calendar" />
+          <EntitySet Name="ChickenLaws" EntityType="keydowno_backyard_farmerModel.ChickenLaw" />
+          <EntitySet Name="PetShops" EntityType="keydowno_backyard_farmerModel.PetShop" />
+          <EntitySet Name="PetShopsWorkingHours" EntityType="keydowno_backyard_farmerModel.PetShopsWorkingHour" />
+          <EntitySet Name="Tasks" EntityType="keydowno_backyard_farmerModel.Task" />
+          <EntitySet Name="TempZipCodes" EntityType="keydowno_backyard_farmerModel.TempZipCode" />
+          <EntitySet Name="Trainings" EntityType="keydowno_backyard_farmerModel.Training" />
+          <EntitySet Name="UserAssets" EntityType="keydowno_backyard_farmerModel.UserAsset" />
+          <EntitySet Name="UserAssetsHistories" EntityType="keydowno_backyard_farmerModel.UserAssetsHistory" />
+          <EntitySet Name="UserFarms" EntityType="keydowno_backyard_farmerModel.UserFarm" />
+          <EntitySet Name="UserFarmHistories" EntityType="keydowno_backyard_farmerModel.UserFarmHistory" />
+          <EntitySet Name="Users" EntityType="keydowno_backyard_farmerModel.User" />
+          <EntitySet Name="UserTrainings" EntityType="keydowno_backyard_farmerModel.UserTraining" />
+          <EntitySet Name="Vets" EntityType="keydowno_backyard_farmerModel.Vet" />
+          <EntitySet Name="VetsWorkingHours" EntityType="keydowno_backyard_farmerModel.VetsWorkingHour" />
+          <EntitySet Name="ZipCodes" EntityType="keydowno_backyard_farmerModel.ZipCode" />
+          <AssociationSet Name="FK_Assets_Users" Association="keydowno_backyard_farmerModel.FK_Assets_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Asset" EntitySet="Assets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserAssets_Assets" Association="keydowno_backyard_farmerModel.FK_UserAssets_Assets">
+            <End Role="Asset" EntitySet="Assets" />
+            <End Role="UserAsset" EntitySet="UserAssets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserAssetsHistory_Assets" Association="keydowno_backyard_farmerModel.FK_UserAssetsHistory_Assets">
+            <End Role="Asset" EntitySet="Assets" />
+            <End Role="UserAssetsHistory" EntitySet="UserAssetsHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Calendar_Tasks" Association="keydowno_backyard_farmerModel.FK_Calendar_Tasks">
+            <End Role="Task" EntitySet="Tasks" />
+            <End Role="Calendar" EntitySet="Calendars" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Calendar_Users" Association="keydowno_backyard_farmerModel.FK_Calendar_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Calendar" EntitySet="Calendars" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PetShopsWorkingHours_PetShops" Association="keydowno_backyard_farmerModel.FK_PetShopsWorkingHours_PetShops">
+            <End Role="PetShop" EntitySet="PetShops" />
+            <End Role="PetShopsWorkingHour" EntitySet="PetShopsWorkingHours" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tasks_Users" Association="keydowno_backyard_farmerModel.FK_Tasks_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Task" EntitySet="Tasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserTrainings_Trainings" Association="keydowno_backyard_farmerModel.FK_UserTrainings_Trainings">
+            <End Role="Training" EntitySet="Trainings" />
+            <End Role="UserTraining" EntitySet="UserTrainings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserAssets_Users" Association="keydowno_backyard_farmerModel.FK_UserAssets_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserAsset" EntitySet="UserAssets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserAssetsHistory_Users" Association="keydowno_backyard_farmerModel.FK_UserAssetsHistory_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserAssetsHistory" EntitySet="UserAssetsHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserFarm_Users" Association="keydowno_backyard_farmerModel.FK_UserFarm_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserFarm" EntitySet="UserFarms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserFarmHistory_Users" Association="keydowno_backyard_farmerModel.FK_UserFarmHistory_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserFarmHistory" EntitySet="UserFarmHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserTrainings_Users" Association="keydowno_backyard_farmerModel.FK_UserTrainings_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserTraining" EntitySet="UserTrainings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VetsWorkingHours_Vets" Association="keydowno_backyard_farmerModel.FK_VetsWorkingHours_Vets">
+            <End Role="Vet" EntitySet="Vets" />
+            <End Role="VetsWorkingHour" EntitySet="VetsWorkingHours" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Asset">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="Cost" />
+          <Property Type="Int32" Name="AddedByUser" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="keydowno_backyard_farmerModel.FK_Assets_Users" FromRole="Asset" ToRole="User" />
+          <NavigationProperty Name="UserAssets" Relationship="keydowno_backyard_farmerModel.FK_UserAssets_Assets" FromRole="Asset" ToRole="UserAsset" />
+          <NavigationProperty Name="UserAssetsHistories" Relationship="keydowno_backyard_farmerModel.FK_UserAssetsHistory_Assets" FromRole="Asset" ToRole="UserAssetsHistory" />
+        </EntityType>
+        <EntityType Name="BirdVet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Zip" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ClinicName" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="City" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="State" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Calendar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Date" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="TaskId" Nullable="false" />
+          <Property Type="Boolean" Name="TaskCompleted" Nullable="false" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <NavigationProperty Name="Task" Relationship="keydowno_backyard_farmerModel.FK_Calendar_Tasks" FromRole="Calendar" ToRole="Task" />
+          <NavigationProperty Name="User" Relationship="keydowno_backyard_farmerModel.FK_Calendar_Users" FromRole="Calendar" ToRole="User" />
+        </EntityType>
+        <EntityType Name="ChickenLaw">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Location" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AreChickensAllowed" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ChickensAllowed" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RoostersAllowed" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PermitRequired" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CoopRestrictions" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Contacts" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Info" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Link" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastUpdate" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PetShop">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Zip" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="Latitude" />
+          <Property Type="Double" Name="Longitude" />
+          <NavigationProperty Name="PetShopsWorkingHour" Relationship="keydowno_backyard_farmerModel.FK_PetShopsWorkingHours_PetShops" FromRole="PetShop" ToRole="PetShopsWorkingHour" />
+        </EntityType>
+        <EntityType Name="PetShopsWorkingHour">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="MondayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MondayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TuesdayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="WednesdayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ThursdayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FridayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SaturdayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SundayStartTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TuesdayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="WednesdayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ThursdayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FridayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SaturdayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SundayEndTime" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PetShop" Relationship="keydowno_backyard_farmerModel.FK_PetShopsWorkingHours_PetShops" FromRole="PetShopsWorkingHour" ToRole="PetShop" />
+        </EntityType>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="DateTime" Name="DateAdded" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Calendars" Relationship="keydowno_backyard_farmerModel.FK_Calendar_Tasks" FromRole="Task" ToRole="Calendar" />
+          <NavigationProperty Name="User" Relationship="keydowno_backyard_farmerModel.FK_Tasks_Users" FromRole="Task" ToRole="User" />
+        </EntityType>
+        <EntityType Name="TempZipCode">
+          <Key>
+            <PropertyRef Name="Zip" />
+          </Key>
+          <Property Type="String" Name="Zip" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="City" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="State" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="County" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="Latitude" />
+          <Property Type="Double" Name="Longitude" />
+          <Property Type="String" Name="Country" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Parsed" />
+        </EntityType>
+        <EntityType Name="Training">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Title" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="UserTrainings" Relationship="keydowno_backyard_farmerModel.FK_UserTrainings_Trainings" FromRole="Training" ToRole="UserTraining" />
+        </EntityType>
+        <EntityType Name="UserAsset">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="Int32" Name="AssetId" Nullable="false" />
+          <Property Type="Double" Name="CurrentQuantity" Nullable="false" />
+          <NavigationProperty Name="Asset" Relationship="keydowno_backyard_farmerModel.FK_UserAssets_Assets" FromRole="UserAsset" ToRole="Asset" />
+          <NavigationProperty Name="User" Relationship="keydowno_backyard_farmerModel.FK_UserAssets_Users" FromRole="UserAsset" ToRole="User" />
+        </EntityType>
+        <EntityType Name="UserAssetsHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="Int32" Name="AssetId" Nullable="false" />
+          <Property Type="String" Name="AssetStatus" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="ActionDate" Nullable="false" Precision="3" />
+          <Property Type="Double" Name="AssetPrice" Nullable="false" />
+          <Property Type="Double" Name="AssetCount" Nullable="false" />
+          <NavigationProperty Name="Asset" Relationship="keydowno_backyard_farmerModel.FK_UserAssetsHistory_Assets" FromRole="UserAssetsHistory" ToRole="Asset" />
+          <NavigationProperty Name="User" Relationship="keydowno_backyard_farmerModel.FK_UserAssetsHistory_Users" FromRole="UserAssetsHistory" ToRole="User" />
+        </EntityType>
+        <EntityType Name="UserFarm">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="Int32" Name="PetId" Nullable="false" />
+          <Property Type="Int32" Name="PetCount" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="keydowno_backyard_farmerModel.FK_UserFarm_Users" FromRole="UserFarm" ToRole="User" />
+        </EntityType>
+        <EntityType Name="UserFarmHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="Int32" Name="PetId" Nullable="false" />
+          <Property Type="Int32" Name="PetCount" Nullable="false" />
+          <Property Type="DateTime" Name="ActionDate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="PetStatus" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="PetPrice" />
+          <NavigationProperty Name="User" Relationship="keydowno_backyard_farmerModel.FK_UserFarmHistory_Users" FromRole="UserFarmHistory" ToRole="User" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Username" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AuthCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SessionId" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="DateRegistered" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="LastLogin" Precision="3" />
+          <Property Type="String" Name="FirstName" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Assets" Relationship="keydowno_backyard_farmerModel.FK_Assets_Users" FromRole="User" ToRole="Asset" />
+          <NavigationProperty Name="Calendars" Relationship="keydowno_backyard_farmerModel.FK_Calendar_Users" FromRole="User" ToRole="Calendar" />
+          <NavigationProperty Name="Tasks" Relationship="keydowno_backyard_farmerModel.FK_Tasks_Users" FromRole="User" ToRole="Task" />
+          <NavigationProperty Name="UserAssets" Relationship="keydowno_backyard_farmerModel.FK_UserAssets_Users" FromRole="User" ToRole="UserAsset" />
+          <NavigationProperty Name="UserAssetsHistories" Relationship="keydowno_backyard_farmerModel.FK_UserAssetsHistory_Users" FromRole="User" ToRole="UserAssetsHistory" />
+          <NavigationProperty Name="UserFarms" Relationship="keydowno_backyard_farmerModel.FK_UserFarm_Users" FromRole="User" ToRole="UserFarm" />
+          <NavigationProperty Name="UserFarmHistories" Relationship="keydowno_backyard_farmerModel.FK_UserFarmHistory_Users" FromRole="User" ToRole="UserFarmHistory" />
+          <NavigationProperty Name="UserTrainings" Relationship="keydowno_backyard_farmerModel.FK_UserTrainings_Users" FromRole="User" ToRole="UserTraining" />
+        </EntityType>
+        <EntityType Name="UserTraining">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="Int32" Name="TrainingId" Nullable="false" />
+          <Property Type="DateTime" Name="DateCompleted" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Training" Relationship="keydowno_backyard_farmerModel.FK_UserTrainings_Trainings" FromRole="UserTraining" ToRole="Training" />
+          <NavigationProperty Name="User" Relationship="keydowno_backyard_farmerModel.FK_UserTrainings_Users" FromRole="UserTraining" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Vet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Zip" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="Longitude" />
+          <Property Type="Double" Name="Latitude" />
+          <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="State" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VetsWorkingHour" Relationship="keydowno_backyard_farmerModel.FK_VetsWorkingHours_Vets" FromRole="Vet" ToRole="VetsWorkingHour" />
+        </EntityType>
+        <EntityType Name="VetsWorkingHour">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Monday" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Tuesday" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Wednesday" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Thursday" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Friday" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Saturday" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Sunday" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Vet" Relationship="keydowno_backyard_farmerModel.FK_VetsWorkingHours_Vets" FromRole="VetsWorkingHour" ToRole="Vet" />
+        </EntityType>
+        <EntityType Name="ZipCode">
+          <Key>
+            <PropertyRef Name="Zip" />
+          </Key>
+          <Property Type="String" Name="Zip" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="State" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="County" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="Double" Name="Latitude" />
+          <Property Type="Double" Name="Longitude" />
+          <Property Type="String" Name="Country" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Parsed" />
+        </EntityType>
+        <Association Name="FK_Assets_Users">
+          <End Type="keydowno_backyard_farmerModel.User" Role="User" Multiplicity="1" />
+          <End Type="keydowno_backyard_farmerModel.Asset" Role="Asset" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Asset">
+              <PropertyRef Name="AddedByUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserAssets_Assets">
+          <End Type="keydowno_backyard_farmerModel.Asset" Role="Asset" Multiplicity="1" />
+          <End Type="keydowno_backyard_farmerModel.UserAsset" Role="UserAsset" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Asset">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserAsset">
+              <PropertyRef Name="AssetId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserAssetsHistory_Assets">
+          <End Type="keydowno_backyard_farmerModel.Asset" Role="Asset" Multiplicity="1" />
+          <End Type="keydowno_backyard_farmerModel.UserAssetsHistory" Role="UserAssetsHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Asset">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserAssetsHistory">
+              <PropertyRef Name="AssetId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Calendar_Tasks">
+          <End Type="keydowno_backyard_farmerModel.Task" Role="Task" Multiplicity="1" />
+          <End Type="keydowno_backyard_farmerModel.Calendar" Role="Calendar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Task">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Calendar">
+              <PropertyRef Name="TaskId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Calendar_Users">
+          <End Type="keydowno_backyard_farmerModel.User" Role="User" Multiplicity="1" />
+          <End Type="keydowno_backyard_farmerModel.Calendar" Role="Calendar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Calendar">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PetShopsWorkingHours_PetShops">
+          <End Type="keydowno_backyard_farmerModel.PetShop" Role="PetShop" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="keydowno_backyard_farmerModel.PetShopsWorkingHour" Role="PetShopsWorkingHour" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="PetShop">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PetShopsWorkingHour">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tasks_Users">
+          <End Type="keydowno_backyard_farmerModel.User" Role="User" Multiplicity="1" />
+          <End Type="keydowno_backyard_farmerModel.Task" Role="Task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Task">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserTrainings_Trainings">
+          <End Type="keydowno_backyard_farmerModel.Training" Role="Training" Multiplicity="1" />
+          <End Type="keydowno_backyard_farmerModel.UserTraining" Role="UserTraining" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Training">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserTraining">
+              <PropertyRef Name="TrainingId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserAssets_Users">
+          <End Type="keydowno_backyard_farmerModel.User" Role="User" Multiplicity="1" />
+          <End Type="keydowno_backyard_farmerModel.UserAsset" Role="UserAsset" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserAsset">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserAssetsHistory_Users">
+          <End Type="keydowno_backyard_farmerModel.User" Role="User" Multiplicity="1" />
+          <End Type="keydowno_backyard_farmerModel.UserAssetsHistory" Role="UserAssetsHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserAssetsHistory">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserFarm_Users">
+          <End Type="keydowno_backyard_farmerModel.User" Role="User" Multiplicity="1" />
+          <End Type="keydowno_backyard_farmerModel.UserFarm" Role="UserFarm" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserFarm">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserFarmHistory_Users">
+          <End Type="keydowno_backyard_farmerModel.User" Role="User" Multiplicity="1" />
+          <End Type="keydowno_backyard_farmerModel.UserFarmHistory" Role="UserFarmHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserFarmHistory">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserTrainings_Users">
+          <End Type="keydowno_backyard_farmerModel.User" Role="User" Multiplicity="1" />
+          <End Type="keydowno_backyard_farmerModel.UserTraining" Role="UserTraining" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserTraining">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VetsWorkingHours_Vets">
+          <End Type="keydowno_backyard_farmerModel.Vet" Role="Vet" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="keydowno_backyard_farmerModel.VetsWorkingHour" Role="VetsWorkingHour" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Vet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="VetsWorkingHour">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="keydowno_backyard_farmerModelStoreContainer" CdmEntityContainer="keydowno_backyard_farmerEntities">
+          <EntitySetMapping Name="Assets">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.Asset">
+              <MappingFragment StoreEntitySet="Assets">
+                <ScalarProperty Name="AddedByUser" ColumnName="AddedByUser" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BirdVets">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.BirdVet">
+              <MappingFragment StoreEntitySet="BirdVets">
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="ClinicName" ColumnName="ClinicName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Calendars">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.Calendar">
+              <MappingFragment StoreEntitySet="Calendar">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="TaskCompleted" ColumnName="TaskCompleted" />
+                <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChickenLaws">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.ChickenLaw">
+              <MappingFragment StoreEntitySet="ChickenLaws">
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Info" ColumnName="Info" />
+                <ScalarProperty Name="Contacts" ColumnName="Contacts" />
+                <ScalarProperty Name="CoopRestrictions" ColumnName="CoopRestrictions" />
+                <ScalarProperty Name="PermitRequired" ColumnName="PermitRequired" />
+                <ScalarProperty Name="RoostersAllowed" ColumnName="RoostersAllowed" />
+                <ScalarProperty Name="ChickensAllowed" ColumnName="ChickensAllowed" />
+                <ScalarProperty Name="AreChickensAllowed" ColumnName="AreChickensAllowed" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PetShops">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.PetShop">
+              <MappingFragment StoreEntitySet="PetShops">
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PetShopsWorkingHours">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.PetShopsWorkingHour">
+              <MappingFragment StoreEntitySet="PetShopsWorkingHours">
+                <ScalarProperty Name="SundayEndTime" ColumnName="SundayEndTime" />
+                <ScalarProperty Name="SaturdayEndTime" ColumnName="SaturdayEndTime" />
+                <ScalarProperty Name="FridayEndTime" ColumnName="FridayEndTime" />
+                <ScalarProperty Name="ThursdayEndTime" ColumnName="ThursdayEndTime" />
+                <ScalarProperty Name="WednesdayEndTime" ColumnName="WednesdayEndTime" />
+                <ScalarProperty Name="TuesdayEndTime" ColumnName="TuesdayEndTime" />
+                <ScalarProperty Name="SundayStartTime" ColumnName="SundayStartTime" />
+                <ScalarProperty Name="SaturdayStartTime" ColumnName="SaturdayStartTime" />
+                <ScalarProperty Name="FridayStartTime" ColumnName="FridayStartTime" />
+                <ScalarProperty Name="ThursdayStartTime" ColumnName="ThursdayStartTime" />
+                <ScalarProperty Name="WednesdayStartTime" ColumnName="WednesdayStartTime" />
+                <ScalarProperty Name="TuesdayStartTime" ColumnName="TuesdayStartTime" />
+                <ScalarProperty Name="MondayEndTime" ColumnName="MondayEndTime" />
+                <ScalarProperty Name="MondayStartTime" ColumnName="MondayStartTime" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tasks">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.Task">
+              <MappingFragment StoreEntitySet="Tasks">
+                <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TempZipCodes">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.TempZipCode">
+              <MappingFragment StoreEntitySet="TempZipCodes">
+                <ScalarProperty Name="Parsed" ColumnName="Parsed" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trainings">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.Training">
+              <MappingFragment StoreEntitySet="Trainings">
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserAssets">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.UserAsset">
+              <MappingFragment StoreEntitySet="UserAssets">
+                <ScalarProperty Name="CurrentQuantity" ColumnName="CurrentQuantity" />
+                <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserAssetsHistories">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.UserAssetsHistory">
+              <MappingFragment StoreEntitySet="UserAssetsHistory">
+                <ScalarProperty Name="AssetCount" ColumnName="AssetCount" />
+                <ScalarProperty Name="AssetPrice" ColumnName="AssetPrice" />
+                <ScalarProperty Name="ActionDate" ColumnName="ActionDate" />
+                <ScalarProperty Name="AssetStatus" ColumnName="AssetStatus" />
+                <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserFarms">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.UserFarm">
+              <MappingFragment StoreEntitySet="UserFarm">
+                <ScalarProperty Name="PetCount" ColumnName="PetCount" />
+                <ScalarProperty Name="PetId" ColumnName="PetId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserFarmHistories">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.UserFarmHistory">
+              <MappingFragment StoreEntitySet="UserFarmHistory">
+                <ScalarProperty Name="PetPrice" ColumnName="PetPrice" />
+                <ScalarProperty Name="PetStatus" ColumnName="PetStatus" />
+                <ScalarProperty Name="ActionDate" ColumnName="ActionDate" />
+                <ScalarProperty Name="PetCount" ColumnName="PetCount" />
+                <ScalarProperty Name="PetId" ColumnName="PetId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+                <ScalarProperty Name="DateRegistered" ColumnName="DateRegistered" />
+                <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+                <ScalarProperty Name="AuthCode" ColumnName="AuthCode" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTrainings">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.UserTraining">
+              <MappingFragment StoreEntitySet="UserTrainings">
+                <ScalarProperty Name="DateCompleted" ColumnName="DateCompleted" />
+                <ScalarProperty Name="TrainingId" ColumnName="TrainingId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vets">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.Vet">
+              <MappingFragment StoreEntitySet="Vets">
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VetsWorkingHours">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.VetsWorkingHour">
+              <MappingFragment StoreEntitySet="VetsWorkingHours">
+                <ScalarProperty Name="Sunday" ColumnName="Sunday" />
+                <ScalarProperty Name="Saturday" ColumnName="Saturday" />
+                <ScalarProperty Name="Friday" ColumnName="Friday" />
+                <ScalarProperty Name="Thursday" ColumnName="Thursday" />
+                <ScalarProperty Name="Wednesday" ColumnName="Wednesday" />
+                <ScalarProperty Name="Tuesday" ColumnName="Tuesday" />
+                <ScalarProperty Name="Monday" ColumnName="Monday" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZipCodes">
+            <EntityTypeMapping TypeName="keydowno_backyard_farmerModel.ZipCode">
+              <MappingFragment StoreEntitySet="ZipCode">
+                <ScalarProperty Name="Parsed" ColumnName="Parsed" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
