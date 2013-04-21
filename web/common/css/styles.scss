@@ -1,0 +1,426 @@
+@import "_mixins";
+@import "_base";
+
+
+
+
+//#region Base plus
+
+
+
+
+	// Header
+	#header {}
+
+
+
+
+	// Logo
+	#logo {
+		width: 180px;
+		height: 144px;
+		background: #426a7f url( "../images/logo.png" ) center center no-repeat;
+		background-size: 100px;
+		text-indent: -999em;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 10;
+	}
+
+
+
+
+	// Navigation
+	#nav {
+		width: 180px;
+		color: #ffffff;
+		background: #426a7f;
+		font-size: 16px;
+		line-height: 3;
+		position: fixed;
+		top: 144px;
+		bottom: 0;
+		z-index: 100;
+
+
+		ul {
+			@include reset;
+			border-top: 1px solid #335c72;
+		}
+		li {
+			@include reset;
+			border-bottom: 1px solid #335c72;
+		}
+
+
+		a {
+			padding: 0 0 0 50px;
+			color: #ffffff;
+			text-decoration: none;
+			background-position: 15px center;
+			background-repeat: no-repeat;
+			display: block;
+
+			&:hover {
+				background-color: #335c72;
+			}
+
+		}
+
+			.current a {
+				padding-left: 45px;
+				border-left: 5px solid #ba3a3e;
+				background-position: 10px center;
+			}
+
+			.page-tasks a {
+				background-image: url("../images/icon-page-tasks.png");
+			}
+			.page-farm a {
+				background-image: url("../images/icon-page-farm.png");
+			}
+			.page-training a {
+				background-image: url("../images/icon-page-training.png");
+			}
+			.page-finances a {
+				background-image: url("../images/icon-page-finance.png");
+			}
+			.page-assets a {
+				background-image: url("../images/icon-page-assets.png");
+			}
+			.page-calendar a {
+				background-image: url("../images/icon-page-calendar.png");
+			}
+	}
+
+
+
+
+	// Content
+	#content {
+		margin: 0 0 0 180px;
+		padding: 20px;
+		height: 100%;
+		-moz-box-sizing: border-box;
+		-webkit-border-sizing: border-box;
+		box-sizing: border-box;
+		overflow: auto;
+		box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+		position: relative;
+		z-index: 1000;
+	}
+
+
+
+	// Forms
+	#frmLogin,
+	#frmRegister {
+		padding: 3em 0;
+		width: 100%;
+		height: 100%;
+		color: #ffffff;
+		background: #426a7f;
+		position: absolute;
+		top: 350px;
+
+		.wrap {
+			margin: auto;
+			width: 380px;
+		}
+
+		h6 {
+			margin: 0;
+			font-size: 20px;;
+		}
+		p {
+			@include self-clearing;
+			margin: 10px 0;
+
+			.text {
+				width: 100%;
+			}
+		}
+	}
+
+
+		#frmLogin {
+		}
+
+
+
+
+//#endregion
+
+
+
+
+//#region Modules
+
+
+
+	// Titles
+	#page-title {}
+	.sub {
+		margin: 21px -20px;
+		padding: 0 20px;
+		border-bottom: 1px solid #ebebeb;
+		border-top: 1px solid #ebebeb;
+		font-size: 16px;
+		line-height: 42px;
+	}
+
+		#page-title + .sub {
+			margin-top: -1px;
+		}
+
+
+
+	// Generic list
+	.list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+
+
+	// Item list
+	.item-list {
+		@include reset;
+		@include self-clearing;
+		margin: 0 -10px;
+
+
+		.item {
+			margin: 10px;
+			width: 300px;
+			border: 1px solid #ebebeb;
+			float: left;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.title {
+			margin: -1px -1px 0;
+			padding: 0 10px;
+			border: 1px solid #ebebeb;
+			font-size: 16px;
+			line-height: 2;
+		}
+
+
+		.body {
+			padding: 10px;
+
+			p {
+				margin: 5px 0 0;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+
+
+
+	// Task list
+	.task-list {
+
+
+		.body {
+			height: 4.5em;
+			overflow: hidden;
+		}
+
+
+		.done,
+		.listDone {
+			.title {
+				border: 1px solid #426a7f;
+				color: #ffffff;
+				background-color: #5c8398;
+			}
+		}
+		.not,
+		.listNotDone {
+			.title {
+				border-color: #ba3a3e;
+				color: #ffffff;
+				background-color: #da4d4c;
+			}
+		}
+	}
+
+
+
+
+	// Training list
+	.training-list {
+
+
+		.body {
+			height: 9em;
+			overflow: hidden;
+
+
+			h1, h2, h3, h4, h5, h6 {
+				display: none;
+			}
+			p {
+				display: inline;
+			}
+		}
+
+
+		.done,
+		.listDone {
+			.title {
+				border: 1px solid #426a7f;
+				color: #ffffff;
+				background-color: #5c8398;
+			}
+		}
+		.not,
+		.listNotDone {
+			.title {
+				border-color: #ba3a3e;
+				color: #ffffff;
+				background-color: #da4d4c;
+			}
+		}
+	}
+
+
+
+
+	// Grid
+	.grid {
+		width: 100%;
+		border-collapse: collapse;
+		border: 1px solid #ebebeb;
+		table-layout: fixed;
+
+		th, td {
+			padding: 5px 10px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			border: 1px solid #ebebeb;
+		}
+
+			th {
+				width: 180px;
+			}
+	}
+
+
+
+
+	// Window
+	#modal {
+		width: 100%;
+		height: 100%;
+		background: rgba(black, .5);
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 10000;
+	}
+
+
+		#modalWrapper {
+			margin-left: -350px;
+			width: 700px;
+			border: 1px solid #ebebeb;
+			background: #ffffff;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			position: absolute;
+			top: 50px;
+			left: 50%;
+		}
+		#modalHeader {
+			margin: -1px -1px 0;
+			padding: 0 20px;
+			border: 1px solid #426a7f;
+			color: #ffffff;
+			background: #5c8398;
+			font-size: 16px;
+			line-height: 42px;
+
+			#modalTitle {
+				margin: 0;
+				line-height: inherit;
+			}
+		}
+		#modalContent {
+			padding: 20px;
+
+			.title {
+				display: none;
+			}
+			.body {
+				height: 300px;
+				overflow: auto;
+			}
+		}
+
+
+
+
+//#endregion
+
+
+
+
+//#region Pages
+
+
+
+	// Hide all pages
+	#modal,
+	#frmLogin,
+	#frmRegister {
+		display: none;
+	}
+
+
+		// Login / register page
+		.login-page,
+		.register-page {
+
+			// Hide nav and content
+			#nav,
+			#content {
+				display: none;
+			}
+
+
+			// Center logo
+			#logo {
+				margin-left: -125px;
+				width: 250px;
+				height: 300px;
+				background-color: transparent;
+				background-size: auto;
+				position: absolute;
+				top: 20px;
+				left: 50%;
+			}
+		}
+
+
+
+	// Login page
+
+
+
+
+
+//#ednregion

@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html class="login-page">
+<head>
+	<meta charset="utf-8" />
+	<title>Title</title>
+	<link rel="stylesheet" type="text/css" href="common/css/kendo.default.min.css" />
+	<link rel="stylesheet" type="text/css" href="common/css/styles.css" />
+</head>
+<body>
+<div id="site-wrap">
+
+	<div id="logo">
+		Logo
+	</div>
+
+
+	<div id="nav">
+		<ul>
+			<li class="page-tasks"><a href="#" id="nav-tasks">Tasks</a></li>
+			<li class="page-farm"><a href="#" id="nav-farm">My farm</a></li>
+			<li class="page-training"><a href="#" id="nav-trainings">Trainings</a></li>
+			<li class="page-finances"><a href="#" id="nav-finances">Finances</a></li>
+			<li class="page-assets"><a href="#" id="nav-assets">Assets</a></li>
+			<li class="page-calendar"><a href="#" id="nav-calendar">Calendar</a></li>
+		</ul>
+	</div>
+
+
+	<div id="content" class="main">
+		<h1 id="page-title"><!-- Page Title placeholder --></h1>
+
+		<ul id="tasksList" class="item-list task-list">
+			<li><!-- Task placeholder --></li>
+		</ul>
+
+		<ul id="trainingsList" class="item-list training-list">
+			<li><!-- Training placeholder --></li>
+		</ul>
+
+		<section id="assetsContainer">
+			<!-- Assets placeholder -->
+		</section>
+
+		<section id="financeContainer">
+			<!-- Finance placeholder -->
+		</section>
+
+		<section id="farmContainer">
+			<!-- Farm placeholder -->
+		</section>
+
+		<section id="calendarContainer">
+			<label for="mydate">Some Date</label>
+
+			<input name="mydate" id="mydate" type="date" data-role="datebox"
+				data-options='{"mode": "calbox"}' />
+			<dl id="dateResult">
+
+			</dl>
+		</section>
+
+		<div id="modal">
+			<div id="modalWrapper">
+				<header id="modalHeader">
+					<h2 id="modalTitle">Lorem Ipsum Dolor</h2>
+					<img src="common/images/icon-window-close.png" id="modalClose" />
+				</header>
+				<div id="modalContent">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere pellentesque diam et rutrum. Phasellus varius vestibulum condimentum. Aliquam erat volutpat. Nullam vel pellentesque massa. Quisque neque leo, dapibus vel tempus sed, malesuada id ipsum. Aenean posuere, elit accumsan interdum vulputate, enim erat laoreet augue, sit amet dapibus lacus urna nec ipsum. Nulla sit amet
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<form id='frmRegister' action='' method=''>
+		<input type='text' id='txtRegUsername' />
+		<input type='password' id='txtRegPassword' />
+		<input type='password' id='txtRegRepeatPassword' />
+		<a href="#" id="btnSubmitRegister">Register</a>
+	</form>
+
+	<form id='frmLogin' action='' method=''>
+		<div class="wrap">
+			<h6>Fill in your details below to log in</h6>
+			<p class="user">
+				<input type='text' class="text" id='txtLogUsername' placeholder="username" />
+			</p>
+			<p class="pass">
+				<input type='password' class="text" id='txtLogPassword' placeholder="password" />
+
+			</p>
+			<p class="buttons">
+				<a href="#" class="button" id="btnSubmitLogin">Login</a>
+			</p>
+			<p>
+				<a href='#' id='btnRegister'>New to Chicksbook?</a>
+			</p>
+		</div>
+	</form>
+
+
+</div>
+<div id="scripts" style="dsiplay: none!important">
+	<script src="common/js/jquery.min.js"></script>
+	<script src="common/js/kendo.web.min.js"></script>
+	<script src="common/js/Calendar.js"></script>
+	<script src="common/js/Assets.js"></script>
+	<script src="common/js/Farm.js"></script>
+	<script src="common/js/Finance.js"></script>
+	<script src="common/js/User.js"></script>
+	<script src="common/js/Tasks.js"></script>
+	<script src="common/js/Trainings.js"></script>
+	<script src="common/js/SiteController.js"></script>
+</div>
+</body>
+</html>
