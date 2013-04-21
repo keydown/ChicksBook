@@ -1,0 +1,149 @@
+html, body, #nav ul, #nav li, .main .item-list {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none; }
+
+.main .item-list {
+  zoom: 1; }
+  .main .item-list:after {
+    content: "";
+    clear: both;
+    display: block; }
+
+html {
+  background: white url("../images/site-tile.png") 0 0 repeat-y; }
+
+body {
+  color: #666666;
+  background: none;
+  font: 14px Helvetica, Arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  line-height: 48px; }
+
+h1 {
+  font-size: 22px; }
+
+h2 {
+  font-size: 16px; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+#logo {
+  width: 160px;
+  height: 144px;
+  background: url("../images/logo.png") center center no-repeat;
+  text-indent: -999em;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+#nav {
+  width: 160px;
+  color: #ffffff;
+  background: #426a7f url("../images/site-tile.png") 0 0 repeat-y;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 48px;
+  position: absolute;
+  top: 144px;
+  left: 0; }
+  #nav ul {
+    border-top: 1px solid #335c72; }
+  #nav li {
+    border-bottom: 1px solid #335c72; }
+  #nav a {
+    padding: 0 0 0 50px;
+    color: #ffffff;
+    text-decoration: none;
+    display: block; }
+    #nav a:hover {
+      background-color: #335c72; }
+
+#content {
+  margin: 0 0 0 160px;
+  padding: 20px; }
+
+.main h1 {
+  margin: -20px -20px 0;
+  padding: 0 20px 0 40px;
+  border-bottom: 1px solid #ebebeb;
+  font-size: 22px;
+  line-height: 48px; }
+  .main h1 + .sub {
+    margin: 0 -20px 0;
+    padding: 0 20px;
+    border-bottom: 1px solid #ebebeb;
+    font-size: 16px;
+    line-height: 48px; }
+.main .item-list {
+  margin: 0 -10px; }
+  .main .item-list .item {
+    margin: 10px;
+    width: 220px;
+    border: 1px solid #ebebeb;
+    float: left;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .main .item-list .title {
+    margin: -1px -1px 0;
+    padding: 0 10px;
+    border: 1px solid #ebebeb;
+    font-size: 16px;
+    line-height: 48px; }
+  .main .item-list .body {
+    padding: 10px; }
+.main .task-list .done .title {
+  border: 1px solid #426a7f;
+  color: #ffffff;
+  background-color: #5c8398; }
+.main .task-list .not .title {
+  border-color: #ba3a3e;
+  color: #ffffff;
+  background-color: #da4d4c; }
+
+.ui-window {
+  width: 540px;
+  border: 1px solid #ebebeb;
+  background: #ffffff;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .ui-window .title {
+    margin: -1px -1px 0;
+    padding: 0 20px;
+    border: 1px solid #426a7f;
+    color: #ffffff;
+    background: #5c8398;
+    font-size: 16px;
+    line-height: 48px; }
+  .ui-window .body {
+    padding: 20px; }
+
+button {
+  padding: 0 20px;
+  min-width: 140px;
+  border: 1px solid #afafaf;
+  border-radius: 5px;
+  color: #666666;
+  background: #dadada;
+  background-image: linear-gradient(to bottom, #eaeaea, #dadada);
+  font: 16px/36px "Open Sans", sans-serif; }
+
+button.primary {
+  border-color: #213f56;
+  color: #ffffff;
+  background: #dadada;
+  background-image: linear-gradient(to bottom, #567e93, #436b80); }
+
+
+#frmLogin, #frmRegister, #tasksList
+{
+    display: none;
+}

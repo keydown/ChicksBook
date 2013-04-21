@@ -1,0 +1,612 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello, World</title>
+        <link href="jquery-mobile/jquery.mobile-1.2.0.min.css" rel="stylesheet" type="text/css" />
+        <link href="styles/main.css" rel="stylesheet" type="text/css" />  
+        
+        <link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" /> 
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 
+        <script type="text/javascript" src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+        <script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+        <script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+        <script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+    </head> 
+    <body>         
+        <div id="site-wrap" data-role='page'>
+            <!-- header -->
+            <header id = "hdr">
+                <div id="menu"></div>
+                <div id="title"><img src="common/images/logo.png" />ChicksBook</div>
+                <div id="settings"></div>
+            </header>
+             <!-- mainNav -->
+            <nav id="mainNav">
+                <ul>
+                    <li><a href = "#" id="navFirst"><img src="common/images/logo.png" /></a></li>
+                    <li><a href = "#" id="nav-tasks">Tasks</a></li>
+                    <li><a href = "#" id="nav-farm">My Farm</a></li>
+                    <li><a href = "#" id="nav-trainings">Training</a></li>
+                    <li><a href = "#" id="nav-finances">Finances</a></li>
+                    <li><a href = "#" id="nav-assets">Assets</a></li>
+                    <li><a href = "#" id="nav-calendar">Calendar</a></li>
+                    <li><a href = "#" id="nav-dictionary">Dictionary</a></li>
+                    
+                </ul>
+            </nav>            
+             <!-- Tasks -->
+            <div id="content">
+                <!-- Modal -->
+                <div id="modal">
+                    <div id="modalWrapper">
+                        <header id="modalHeader">
+                            <h2 id="modalTitle">Lorem Ipsum Dolor</h2>
+                            <img src="img/closeModal.png" id="modalClose" />
+                        </header>
+                        <p id="modalContent">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere pellentesque diam et rutrum. Phasellus varius vestibulum condimentum. Aliquam erat volutpat. Nullam vel pellentesque massa. Quisque neque leo, dapibus vel tempus sed, malesuada id ipsum. Aenean posuere, elit accumsan interdum vulputate, enim erat laoreet augue, sit amet dapibus lacus urna nec ipsum. Nulla sit amet
+                            
+                        </p>
+                    </div>
+                </div>
+                <!-- TASKS -->
+                <ul id="tasksList" class="list"></ul>
+                <ul id="trainingsList" class="list"></ul>
+                <section id="farmContainer"> </section>
+                <section id="financeContainer"></section>
+                <section id="assetsContainer"></section>
+                <section id="calendarContainer">
+                    <input name="mydate" id="mydate" type="date" data-role="datebox"
+                        data-options='{"mode": "calbox", "closeCallback": "siteController.calendar.displayDateInformation($(\"#mydate\").val())"}'>
+                    <dl id="dateResult">
+        
+                    </dl>
+                </section>                                                
+                <section id="dictionaryContainer">
+                                                               
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <p id="dictMenu">
+                        <a href="#A" data-ajax="false">A</a> | 
+                        <a href="#B" data-ajax="false">B</a> | 
+                        <a href="#C" data-ajax="false">C</a> | 
+                        <a href="#D" data-ajax="false">D</a> | 
+                        <a href="#E" data-ajax="false">E</a> | 
+                        <a href="#F" data-ajax="false">F</a> | 
+                        <a href="#G" data-ajax="false">G</a> | 
+                        <a href="#H" data-ajax="false">H</a> | 
+                        <a href="#IJ" data-ajax="false">I-J</a> | 
+                        <a href="#K" data-ajax="false">K</a> | 
+                        <a href="#L" data-ajax="false">L</a> | 
+                        <a href="#M" data-ajax="false">M</a> | 
+                        <a href="#N" data-ajax="false">N</a> | 
+                        <a href="#O" data-ajax="false">O</a> | 
+                        <a href="#PQ" data-ajax="false">P-Q</a> | 
+                        <a href="#R" data-ajax="false">R</a> | 
+                        <a href="#S" data-ajax="false">S</a> | 
+                        <a href="#TU" data-ajax="false">T-U</a> | 
+                        <a href="#V" data-ajax="false">V</a> | 
+                        <a href="#W" data-ajax="false">W</a> | 
+                        <a href="#XYZ" data-ajax="false">X-Y-Z</a><a>.</a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="A">A</a></td>
+        </tr>
+        <tr>
+            <td><h3>Alektorophobia</h3>Fear of chickens
+                    <p><h3>American Standard of Perfection</h3></p> A book published by the American Poultry Association describing each breed recognized by that organization.</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="B">B</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Bantam</h3>  A miniature chicken, about one-fourth to one-half the size of a regular-sized chicken.</p>
+                <p><h3>Bantam Standard</h3> A book published by the American Bantam Association describing each of the bantam breeds recognized by that organization.</p>
+                <p><h3>Banty</h3> (plural, banties) Affectionate word for bantam.</p>
+                <p><h3>Barnyard chicken</h3> A chicken of mixed breed.</p>
+                <p><h3>Beak</h3> The hard, protruding portion of a bird's mouth, consisting of an upper beak and a lower beak.</p>
+                <p><h3>Beard</h3> The feathers (always found in association with a muff) bunched under the beaks of such breeds as Ameraucana, Faverolles, and Houdan.</p>
+                <p><h3>Bedding</h3> Straw, wood shavings, shredded paper, or anything else scattered on the floor of a chicken coop to absorb moisture and manure.</p>
+                <p><h3>Biddy</h3>Affectionate word for a hen.</p>
+                <p><h3>Billing out</h3> Use of the beak to scoop feed out of a feeder onto the floor.</p>
+                <p><h3>Bleaching</h3> The fading of color from the beak, shanks, and vent of a yellow-skinned laying hen.</p>
+                <p><h3>Bloom</h3> The moist, protective coating on a freshly laid egg that dries so fast you rarely see it. 2. Peak condition in an exhibition bird.</p>
+                <p><h3>Blowout</h3> Vent damage caused by laying an oversize egg.</p>
+                <p><h3>Booted</h3> Having feathers on the shanks and toes.</p>
+                <p><h3>Break up</h3> To discourage a hen from setting.</p>
+                <p><h3>Breed</h3> A group of chickens that are like each other and different from other groups. 2. v. Pairing a rooster and hen for the purpose of obtaining fertile eggs.</p>
+                <p><h3>Breeders</h3> Mature chickens from which fertile eggs are collected. 2. A person who manages chickens.</p>
+                <p><h3>Breed true</h3>The characteristic of purebred chicks whereby they resemble both parents.</p>
+                <p><h3>Broiler</h3> A young, tender meat chicken; also called a "fryer."</p>
+                <p><h3>Brood</h3> To care for a batch of chicks. 2. The chicks themselves.</p>
+                <p><h3>Brooder</h3> A heated enclosure used to imitate the warmth and protection a mother hen gives her chicks.</p>
+                <p><h3>Broody</h3> A hen that covers eggs to warm and hatch them. Sometimes refers to a hen that stays in the nest for an extended period without producing eggs.</p>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="C">C</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Candle</h3> To examine the contents of an intact egg with a strong light source.</p>
+                <p><h3>Candler</h3> A device which uses strong light to examine the contents of the egg.</p>
+                <p><h3>Cannibalism</h3> The bad habit chickens have of eating each other's flesh, feathers, or eggs.</p>
+                <p><h3>Cape</h3> The narrow feathers between a chicken's neck and back.</p>
+                <p><h3>Carrier</h3> An apparently healthy individual that transmits disease to other individuals. 2. A container used to transport chickens.</p>
+                <p><h3>Cecum</h3> A blind pouch at the juncture of the small and large intestine (resembles the human appendix); plural: ceca.</p>
+                <p><h3>Cestode</h3> Tapeworm.</p>
+                <p><h3>Chalazae</h3> Two white cords on each side of a yolk that keep the yolk properly positioned within the egg white; singular: chalaza.</p>
+                <p><h3>Chooks</h3> Popular Australian term for chickens.</p>
+                <p><h3>Classification</h3> The grouping of purebred chickens according to their place of origin, such as "American" or "Asiatic."</p>
+                <p><h3>Clean legged</h3> Having no feathers growing down the shanks.</p>
+                <p><h3>Clinical</h3> Having disease signs or symptoms that can be readily observed.</p>
+                <p><h3>Cloaca</h3> The chamber just inside the vent where the digestive, reproductive, and excretory tracts come together.</p>
+                <p><h3>Clutch</h3> A batch of eggs that are hatched together, either in a nest or in an incubator (from the Old Norse word "klekja," meaning to hatch), also called a "setting". 2. All the eggs laid by a hen on consecutive days, before she skips a day and starts a new laying cycle.</p>
+                <p><h3>Coccidiasis</h3> Infection with coccidial protozoa without showing any signs.</p>
+                <p><h3>Coccidiosis</h3> A parasitic protozoal infestation, usually occurring in damp, unclean housing conditions.</p>
+                <p><h3>Coccidiostat</h3> A drug used to keep chickens from getting coccidiosis.</p>
+                <p><h3>Cock</h3> A male chicken; also called a "rooster."</p>
+                <p><h3>Cockerel</h3> A male chicken under 1 year old.</p>
+                <p><h3>Comb</h3> The fleshy, usually red, crown on top of a chicken's head.</p>
+                <p><h3>Conformation</h3> A chicken's body structure.</p>
+                <p><h3>Contagious</h3> Description of a disease that's readily transmitted from one individual or flock to another.</p>
+                <p><h3>Coop</h3> The house or cage in which a chicken lives.</p>
+                <p><h3>Crest</h3> A puff of feathers on the heads of breeds such, as Houdan, Silkie, or Polish; also called a "topknot."</p>
+                <p><h3>Crop</h3> A pouch at the base of a chicken's neck that bulges after the bird has eaten. 2. To trim a bird's wattles.</p>
+                <p><h3>Crossbreed</h3> The offspring of a hen and a rooster of two different breeds.</p>
+                <p><h3>Cull</h3> To eliminate (kill) a non-productive or inferior chicken from a flock. 2. The non-productive or inferior chicken itself.</p>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="D">D</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Dam</h3> Mother.</p>
+                <p><h3>Dam family</h3> Sibling chickens that all have the same dam as well as sire.</p>
+                <p><h3>Debeak</h3> To remove a portion of a bird's top beak to prevent cannibalism or self-pecking.</p>
+                <p><h3>Down</h3> The soft, fur-like fluff covering a newly hatched chick; also, the fluffy part near the bottom of any feather.</p>
+                <p><h3>Droppings.</h3> Chicken manure or "poop".</p>
+                <p><h3>Dub</h3> To trim the comb.</p>
+                <p><h3>Dusting</h3> The act of thrashing around in the dirt to clean their feathers and discourage body parasites.</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="E">E</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Egg tooth</h3> A horny cap on a chick's upper beak that helps the chick pip through the shell.</p>
+                <p><h3>Embryo</h3> A fertilized egg at any stage of development prior to hatching.</p>
+                <p><h3>Enteritis</h3> Inflammation of the intestine.</p>
+                <p><h3>Eversion</h3> Turned inside out.</p>
+                <p><h3>Exhibition breeds</h3> Chickens kept and shown for their beauty rather than their ability to lay eggs or produce meat.</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="F">F</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Feather legged</h3> Having feathers growing down the shanks, i.e., Cochins and Brahmas.</p>
+                <p><h3>Feca</h3> Pertaining to feces.</p>
+                <p><h3>Feces</h3> Droppings or body waste - chicken manure or "poop".</p>
+                <p><h3>Fertile</h3> Capable of producing a chick.</p>
+                <p><h3>Fertilized</h3> Containing sperm.</p>
+                <p><h3>Finish</h3> The amount of fat beneath the skin of a meat bird.</p>
+                <p><h3>Flock</h3> A group of chickens living together.</p>
+                <p><h3>Forced-air incubator</h3> A mechanical device for hatching fertile eggs that has a fan to circulate warm air.</p>
+                <p><h3>Fowl</h3> Domesticated birds raised for food. 2. A stewing hen.</p>
+                <p><h3>Free range</h3> To allow chickens to roam a yard or pasture at will.</p>
+                <p><h3>Frizzle</h3> Feathers that curl rather than laying flat. 2. A breed of chicken.</p>
+                <p><h3>Fryer</h3> A tender young meat chicken; also see "broiler."</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="G">G</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Gizzard</h3> An organ that contains grit for grinding up the grain and plant fiber a chicken eats.</p>
+                <p><h3>Go light</h3> Grow thin while eating ravenously; synonym for anemia.</p>
+                <p><h3>Grade</h3> To sort eggs according to their interior and exterior qualities.</p>
+                <p><h3>Grit</h3> Sand and small pebbles eaten by a chicken and used by its gizzard to grind up grain and plant fiber.</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="H">H</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Hackles</h3> A rooster's cape feathers.</p>
+                <p><h3>Hatch</h3> The process by which a chick comes out of the egg. 2. A group of chicks that come out of their shells at roughly the same time.</p>
+                <p><h3>Hatchability</h3> Percentage of fertilized eggs that hatch under incubation.</p>
+                <p><h3>Helminth</h3> A category of parasitic worms.</p>
+                <p><h3>Helminthiasis</h3> Parasitic worm infestation.</p>
+                <p><h3>Hen</h3> A mature female chicken.</p>
+                <p><h3>Hen feathered</h3> The characteristic of a rooster having rounded rather than pointed sex feathers.</p>
+                <p><h3>Host</h3> A bird (or other animal) on or in which a parasite or an infectious agent lives.</p>
+                <p><h3>Hybrid</h3> The offspring of a hen and rooster of different breeds, each of which might themselves be crossbred; often erroneously applied to the offspring of a hen and rooster of different strains within a breed.</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="IJ">I - J</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Immunity</h3> Ability to resist infection.</p>
+                <p><h3>Impaction</h3> Blockage of a body passage or cavity, such as the crop or cloaca. Also see "pasting".</p>
+                <p><h3>Incubate</h3> To maintain favorable conditions for hatching fertile eggs.</p>
+                <p><h3>Incubation period</h3> The time it takes for the egg to hatch, normally about 21 days. 2. The time from exposure to a disease-causing agent until the first symptom appears.</p>
+                <p><h3>Incubator</h3> A mechanical device for hatching fertile eggs.</p>
+                <p><h3>Infectious</h3> Capable of invading living tissue and multiplying therein, causing disease.</p>
+                <p><h3>Infertility</h3> Temporary or permanent inability to reproduce.</p>
+                <p><h3>Intensity of lay</h3> The number of eggs a hen lays during a given time.</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="K">K</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Keel</h3> The breastbone, which resembles the keel of a boat.</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="L">L</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Leaker</h3> An egg that leaks because the shell is cracked and the shell membrane is broken.</p>
+                <p><h3>Litter</h3> Straw, wood shavings, shredded paper, or anything else scattered on the floor of a chicken coop, run or brooderto absorb moisture and manure.</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="M">M</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Mate</h3> The pairing of a rooster with one or more hens; a hen or rooster so paired.</p>
+                <p><h3>Mite</h3> A tiny jointed-legged body parasite.</p>
+                <p><h3>Molt</h3> The annual shedding and renewing of a bird's feathers.</p>
+                <p><h3>Morbidity</h3> Percentage affected by a disease.</p>
+                <p><h3>Mortality</h3> Percentage killed by a disease.</p>
+                <p><h3>Muff</h3> The feathers (always found in association with a beard) sticking out from both sides of the face, under the beak, of such breeds as Ameraucana, Faverolle, and Houdan; also called "whiskers."</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="N">N</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Nematode</h3> A parasitic roundworm.</p>
+                <p><h3>Nest</h3> A secluded place where a hen feels she may safely leave her eggs; also, the act of brooding.</p>
+                <p><h3>Nest egg</h3> A wooden or plastic egg placed in a nest to encourage hens to lay there.</p>
+                <p><h3>Nest run</h3> Ungraded eggs.</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="O">O</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Oocyst</h3> The infective fertilized egg of certain one-celled animal parasites including protozoa.</p>
+                <p><h3>Oviduct</h3> The tube inside a hen through which an egg travels when it is ready to be laid.</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="PQ">P - Q</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Parasite</h3> An organism that lives on or inside a host animal and derives food or protection from the host without giving anything in return.</p>
+                <p><h3>Pasting</h3> Loose droppings sticking to vent area, also known as "pasting up" and "sticky bottoms".</p>
+                <p><h3>Pathogenic</h3> Capable of causing disease.</p>
+                <p><h3>Pecking order</h3> The social rank of chickens.</p>
+                <p><h3>Pen</h3> A group of chickens entered into a show and judged together. 2. The outside area around a coop.</p>
+                <p><h3>Perch</h3> The place where chickens sleep at night; the act of resting on a perch; also called a "roost."</p>
+                <p><h3>Persistency of lay</h3> The ability of a hen to lay steadily over a long period of time.</p>
+                <p><h3>Pickout</h3> Vent damage due to cannibalism.</p>
+                <p><h3>Pigmentation</h3> The color of a chicken's beak, shanks, and vent.</p>
+                <p><h3>Pinfeathers</h3> The tips of newly emerging feathers.</p>
+                <p><h3>Pip</h3> The hole a newly formed chick makes in its shell when it is ready to hatch. 2. The act of making the hole.</p>
+                <p><h3>Plumage</h3> The total set of feathers covering a chicken.</p>
+                <p><h3>Postmortem</h3> Pertaining to or occurring after death.</p>
+                <p><h3>Poultry</h3> Chickens and other domesticated birds raised for food, eggs or simply as pets.</p>
+                <p><h3>Predator</h3> One animal that hunts another for food.</p>
+                <p><h3>Pullet</h3> A female chicken under 1 year old.</p>
+                <p><h3>Purebred</h3> The offspring of a hen and rooster of the same breed.</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="R">R</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Range fed</h3> Chickens that are allowed to graze freely.</p>
+                <p><h3>Ration</h3> The combination of all feed consumed in a day.</p>
+                <p><h3>Resistance</h3> Immunity to infection.</p>
+                <p><h3>Roaster</h3> A cockerel or pullet, usually weighing 4 to 6 pounds, suitable for cooking whole in the oven.</p>
+                <p><h3>Roost</h3> The place where chickens spend the night; the act of resting on a roost; also called "perch."</p>
+                <p><h3>Rooster</h3> A male chicken; also called a "cock."</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="S">S</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Saddle</h3> The part of a chicken's back just before the tail.</p>
+                <p><h3>Scales</h3> The small, hard, overlapping plates covering a chicken's shanks and toes.</p>
+                <p><h3>Scratch</h3> The habit chickens have of scraping their claws against the ground to dig up tasty things to eat. 2. Any grain fed to chickens.</p>
+                <p><h3>Set</h3> To keep eggs warm so they will hatch; also called "brood."</p>
+                <p><h3>Setting</h3> A group of hatching eggs in an incubator or under a hen; the incubation of eggs by a hen (called "sitting" by some).</p>
+                <p><h3>Sexed</h3> Newly hatched chicks that have been sorted into pullets and cockerels.</p>
+                <p><h3>Sex feather</h3> A hackle, saddle, or tail feather that is rounded in a hen but usually pointed in a rooster (except in breeds that are hen feathered).</p>
+                <p><h3>Shank</h3> The part of a chicken's leg between the claw and the first joint.</p>
+                <p><h3>Sickles</h3> The long, curved tail feathers of some roosters.</p>
+                <p><h3>Sire</h3> Father.</p>
+                <p><h3>Sire family</h3> The offspring of one cock mated to two or more hens, so that all are full or half siblings.</p>
+                <p><h3>Smut</h3> Black feathers that are uncharacteristic for the breed, such as black body feathers in a Rhode Island Red.</p>
+                <p><h3>Spent</h3> No longer laying well.</p>
+                <p><h3>Spurs</h3> The sharp pointed protrusions on a rooster's shanks.</p>
+                <p><h3>Stag</h3> A cockerel on the brink of sexual maturity, when his comb and spurs begin to develop.</p>
+                <p><h3>Standard</h3> The description of an ideal specimen for its breed; also, a chicken that conforms to the description of its breed in the American Standard of Perfection, sometimes erroneously used when referring to large as opposed to bantam breeds.</p>
+                <p><h3>Started pullets</h3> Young female chickens that are nearly old enough to lay.</p>
+                <p><h3>Starter</h3> A feed ration for newly hatched chicks, also called "crumbles".</p>
+                <p><h3>Starve-out</h3> Failure of chicks to eat.</p>
+                <p><h3>Sterile</h3> Permanent inability to reproduce.</p>
+                <p><h3>Sternum</h3> Breastbone or keel.</p>
+                <p><h3>Straightbred</h3> Purebred.</p>
+                <p><h3>Straight run</h3> Newly hatched chicks that have not been sexed; also called "unsexed" or "as hatched."</p>
+                <p><h3>Strain</h3> A flock of related chickens selectively bred by one person or organization for so long that the offspring have become uniform in appearance or production.</p>
+                <p><h3>Stress</h3> Any physical or mental tension that reduces resistance.</p>
+                <p><h3>Stub</h3> Down on the shank or toe of a clean-legged chicken.</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="TU">T - U</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Trachea</h3> Windpipe.</p>
+                <p><h3>Trematode</h3> A parasitic fluke.</p>
+                <p><h3>Type</h3> The size and shape of a chicken that tells you what breed it is.</p>
+                <p><h3>Unthrifty</h3> Unhealthy appearing and/or failing to grow at a normal rate.</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="V">V</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Vaccine</h3> Product made from disease-causing organisms and used to produce immunity.</p>
+                <p><h3>Variety</h3> Subdivision of a breed according to color, comb style, beard, or leg feathering.</p>
+                <p><h3>Vent</h3> The outside opening of the cloaca, through which a chicken emits eggs and droppings from separate channels.</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="W">W</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Wattles</h3> The two red or purplish flaps of flesh that dangle under a chicken's chin.</p>
+                <p><h3>Whiskers</h3> Muffs.</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td><a href="#TOP" data-ajax="false">Top</a> <a id="XYZ">X - Y - Z</a></td>
+        </tr>
+        <tr>
+            <td>
+                <p><h3>Zoning laws</h3> Laws regulating or restricting the use of land for a particular purpose, such as raising chickens.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+                </section>
+                       
+                        
+                 <!-- Trainings -->
+                  
+                <!-- Assets -->
+                <!-- Submit Expence Modal -->
+                <div id="submitExpenceModal">
+                    <div class="modalWrapper">
+                        <div class="modalHeader">
+                            <div class="modalTitle">Submit Expence</div>
+                            <div class="modalClose"><img src="img/closeModal.png" /></div>
+                        </div>
+                        <div class="styled-select">
+                            <select data-role="none" id="assetSelect">
+                               <option>Select asset</option>
+                               <option></option>
+                               <option>The first option</option>
+                               <option>The second option</option>
+                            </select>
+                        </div>
+                        <div id="assetInputs">
+                            <label for="assetPrice">Price</label>
+                            <br />
+                            <input type="text" id="assetPrice" data-role="none" placeholder="Expence $$"/>
+                            <br />
+                            <label for="assetQty">Quantity</label>
+                            <br />
+                            <input type="text" id="assetQty" data-role="none" placeholder="Quantity"/>
+                        </div>
+                        <a href="#" id="addNewExpence">Enter New Expence</a>
+                        <div class="modalButtonsHolder">
+                                <a href="#" class="modalConfirm">Submit</a>
+                                <a href="#" class="modalDecline">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Eneter Custome Expence -->
+                <div id="enterCustomExpenceModal">
+                    <div class="modalWrapper">
+                        <div class="modalHeader">
+                            <div class="modalTitle">Enter Expences Cost</div>
+                            <div class="modalClose"><img src="img/closeModal.png" /></div>
+                        </div>
+                        <div id="assetInputs">
+                            <label for="assetPrice">Expence Title</label>
+                            <br />
+                            <input type="text" id="assetTitle" data-role="none" placeholder="Expence Title"/>
+                            <label for="assetPrice">Price</label>
+                            <br />
+                            <input type="text" id="assetPrice" data-role="none" placeholder="Expence $$"/>
+                            <br />
+                            <label for="assetQty">Quantity</label>
+                            <br />
+                            <input type="text" id="assetQty" data-role="none" placeholder="Quantity"/>
+                        </div>
+                        <div class="modalButtonsHolder">
+                                <a href="#" class="modalConfirm">Submit</a>
+                                <a href="#" class="modalDecline">Cancel</a>
+                        </div>
+                    </div>
+                </div>    
+                <!-- Assets Page -->
+                <div id="assets">
+                    <div id = "assetsHeader">
+                        Assets
+                    </div>
+                    <div id="assetsContent">
+                        <div id="assetsOptionsWrapper">
+                            <div class="assetsOption" id="submitExpence">
+                                <img src = "img/submitExpenceIcon.png" />
+                                <span>Submit New Expence</span>
+                            </div>
+                            <div class="assetsOption" id="checkBalance">
+                                <img src = "img/balanceIcon.png" />
+                                <span>Check Balance</span>
+                            </div>
+                            <div class="assetsOption" id="addExpence">
+                                <img src = "img/newExpenceIcon.png" />
+                                <span>Enter New Expence</span>
+                            </div>
+                            <div class="assetsOption" id="editExpence">
+                                <img src = "img/editExpenceIcon.png" />
+                                <span>Edit Expence</span>
+                            </div>
+                        </div>                
+                    </div>
+                    <div id="listFooter">
+                        Assets options
+                    </div>
+                </div>
+                <!-- Finances Page -->
+                <div id="finances">
+                    <div id = "financeHeader">
+                        Finances
+                    </div>
+                    <div id="totalBalanceHeader">
+                        -100$
+                    </div>
+                    <hr />
+                    <div class="totalBalanceContent">
+                       <h3>Total</h3>
+                        <ul>
+                            <li>Balance</li>
+                            <span class="green">120$</span>
+                            <li>Profit</li>
+                            <span class="red">120$</span>
+                            <li>Loss</li>
+                            <span class="red">120$</span>
+                        </ul>
+                    </div>
+                    <hr />
+                    <div class="totalBalanceContent">
+                       <h3>Assets</h3>
+                        <ul>
+                            <li>Balance</li>
+                            <span class="green">120$</span>
+                            <li>Profit</li>
+                            <span class="red">120$</span>
+                            <li>Loss</li>
+                            <span class="green">120$</span>
+                        </ul>
+                    </div>
+                    <hr />
+                    <div class="totalBalanceContent">
+                       <h3>Farm</h3>
+                        <ul>
+                            <li>Balance</li>
+                            <span class="green">120$</span>
+                            <li>Profit</li>
+                            <span class="green">120$</span>
+                            <li>Loss</li>
+                            <span class="red">120$</span>
+                        </ul>
+                    </div>      
+                </div>
+            </div>  
+         </div>   
+         <!-- Login -->
+        <form id='frmLogin'>
+            <div id='logoWrapper'>
+    	        <img src='../img/LogoChicksBook.png' id='logo' />
+            </div>
+        	<div id= 'loginWrapper'>
+        		<h2>Fill in your details below to log in</h2>
+        		<input type='text' class='username' id='txtLogUsername' data-role="none" placeholder='Username or email'/>
+        		<input type='password' class='password' id='txtLogPassword' data-role="none" placeholder='Password'/>
+        		<a id='btnSubmitLogin'>Login</a>
+        		<br />
+        		<img src = 'img/registerIcon.png' />
+        		<a href ='#' id='btnRegister'>New to Chicksbook?</a>
+        	</div>
+        </form>
+        
+        <form id= "frmRegister">
+            <div id='logoWrapperRegister'>
+    	        <img src='img/LogoChicksBook.png' id='logo' />
+            </div>
+            <div id="registerWrapper">
+                <h2>Please fill in your data</h2>
+                <input type="text" class="username" placeholder="Username"/>
+                <input type="text" class="username" placeholder="Email"/>
+                <input type="password" id="passwordField" placeholder="Password"/>
+                <input type="text" class="password" placeholder="First Name"/>
+                <input type="text" class="password" placeholder="Last Name"/>
+                <a id='btnSubmitRegister'>Register</a>
+            </div>
+        </form> 
+        <script src="cordova.js" type="text/javascript"></script>
+        <script src="jquery-mobile/jquery-1.8.2.min.js" type="text/javascript"></script>
+        <script src="jquery-mobile/jquery.mobile-1.2.0.min.js" type="text/javascript"></script>
+        <script src="common/js/Tasks.js"></script>
+        <script src="common/js/Finance.js"></script>
+        <script src="common/js/Calendar.js"></script>
+        <script src="common/js/Farm.js"></script>
+        <script src="common/js/User.js"></script>
+        <script src="common/js/Trainings.js"></script>        
+        <script src="common/js/Assets.js"></script>            
+        <script src="common/js/SiteController.js"></script>
+    </body>
+</html>
