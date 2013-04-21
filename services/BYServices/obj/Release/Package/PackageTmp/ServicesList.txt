@@ -1,0 +1,30 @@
+Services List:
+
+
+1. api/users/RegisterUser
+2. api/users/LoginUser
+3. api/users/LogoutUser
+4. api/users/UpdateUserInfo
+5. api/trainings/GetTrainingsList
+6. api/trainings/GetTrainingsListByUser
+7. api/trainings/GetCompletedTrainingsByUser
+8. api/trainings/GetUncompletedTrainingsByUser
+9. api/trainings/GetTrainingInfo
+10.api/tasks/GetDailyTasksByUser
+11.api/tasks/UpdateDailyTask
+12.api/tasks/AddTaskForUser
+13.api/tasks/GetTaskInfo
+14.api/tasks/GetTasksByDate
+15.api/assets/GetCurrentAssetsListByUser
+16.api/assets/GetAssetInfo
+17.api/assets/UpdateAssetHistoryByUser
+18.api/assets/GetAssetHistoryByUser
+19.api/farm/GetPetInfo
+20.api/farm/GetPetsList
+21.api/farm/GetCurrentPetsListByUser
+22.api/farm/UpdateFarmHistoryByUser
+23.api/farm/GetFarmHistoryByUser
+24.api/law/GetLawInfo
+25.api/finance/GetFinanceResultsByUser
+26.api/finance/GetFinanceResultsByDate
+27.api/finance/GetFinanceResultsBetweenDates

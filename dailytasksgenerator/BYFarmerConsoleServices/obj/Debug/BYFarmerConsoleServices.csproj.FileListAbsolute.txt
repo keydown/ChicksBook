@@ -1,0 +1,8 @@
+C:\Users\Atanas\Documents\Visual Studio 2012\Projects\ChickBook\BYServices\BYServices\BYFarmerConsoleServices\BYFarmerConsoleServices\bin\Debug\BYFarmerConsoleServices.exe.config
+C:\Users\Atanas\Documents\Visual Studio 2012\Projects\ChickBook\BYServices\BYServices\BYFarmerConsoleServices\BYFarmerConsoleServices\bin\Debug\BYFarmerConsoleServices.exe
+C:\Users\Atanas\Documents\Visual Studio 2012\Projects\ChickBook\BYServices\BYServices\BYFarmerConsoleServices\BYFarmerConsoleServices\bin\Debug\BYFarmerConsoleServices.pdb
+C:\Users\Atanas\Documents\Visual Studio 2012\Projects\ChickBook\BYServices\BYServices\BYFarmerConsoleServices\BYFarmerConsoleServices\bin\Debug\EntityFramework.dll
+C:\Users\Atanas\Documents\Visual Studio 2012\Projects\ChickBook\BYServices\BYServices\BYFarmerConsoleServices\BYFarmerConsoleServices\bin\Debug\EntityFramework.xml
+C:\Users\Atanas\Documents\Visual Studio 2012\Projects\ChickBook\BYServices\BYServices\BYFarmerConsoleServices\BYFarmerConsoleServices\obj\Debug\BYFarmerConsoleServices.csprojResolveAssemblyReference.cache
+C:\Users\Atanas\Documents\Visual Studio 2012\Projects\ChickBook\BYServices\BYServices\BYFarmerConsoleServices\BYFarmerConsoleServices\obj\Debug\BYFarmerConsoleServices.exe
+C:\Users\Atanas\Documents\Visual Studio 2012\Projects\ChickBook\BYServices\BYServices\BYFarmerConsoleServices\BYFarmerConsoleServices\obj\Debug\BYFarmerConsoleServices.pdb

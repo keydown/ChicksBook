@@ -1,30 +1,248 @@
-Services List:
+﻿Services List:
 
 
-1. api/users/RegisterUser
-2. api/users/LoginUser
-3. api/users/LogoutUser
-4. api/users/UpdateUserInfo
-5. api/trainings/GetTrainingsList
-6. api/trainings/GetTrainingsListByUser
-7. api/trainings/GetCompletedTrainingsByUser
-8. api/trainings/GetUncompletedTrainingsByUser
-9. api/trainings/GetTrainingInfo
-10.api/tasks/GetDailyTasksByUser
-11.api/tasks/UpdateDailyTask
-12.api/tasks/AddTaskForUser
-13.api/tasks/GetTaskInfo
-14.api/tasks/GetTasksByDate
-15.api/assets/GetCurrentAssetsListByUser
-16.api/assets/GetAssetInfo
-17.api/assets/UpdateAssetHistoryByUser
-18.api/assets/GetAssetHistoryByUser
-19.api/farm/GetPetInfo
-20.api/farm/GetPetsList
-21.api/farm/GetCurrentPetsListByUser
-22.api/farm/UpdateFarmHistoryByUser
-23.api/farm/GetFarmHistoryByUser
-24.api/law/GetLawInfo
-25.api/finance/GetFinanceResultsByUser
-26.api/finance/GetFinanceResultsByDate
-27.api/finance/GetFinanceResultsBetweenDates
+1. api/Users/RegisterUser - return sessionID after reg
+INPUT usr = {
+			"Username" : "admin",
+			"AuthCode" : "authCode",
+			"firstName" : "Admin",
+			"lastName" : "Admin",
+			"email": "email@gmail.com",
+			"lastLat" : "90.90",
+			"lastLong" : "90.90"
+		};
+OUTPUT {"sessionId" : "id"};
+ERROR "Username must be at least 4 characters long", "ERR_INV_USR"
+      "Username must be shroter than 15 characters", "ERR_INV_USR"
+	  "Username contains invalid characters", "ERR_INV_USR"
+	  "Invalid Authorization Code", "ERR_INV_AUTH"
+	  "First Name Cannot Be Empty", "ERR_INV_FNM"
+	  "First Name Cannot Be Less than 2 symbols long", "ERR_INV_FNM"
+	  "Last Name Cannot Be Empty", "ERR_INV_LNM"
+	  "Last Name Cannot Be Less than 2 symbols long", "ERR_INV_FNM"
+	  "Invalid Email Used", "ERR_INV_EML"
+
+2. api/Users/LoginUser - return sessionID
+	var usr = {
+				"Username" : "admin",
+				"AuthCode" : "authCode",
+				"lastLan" : "90.9",
+				"lastLong" : "90.9"			
+			};
+	OUTPUT {"sessionId" : "id"};
+	ERROR "Invalid username or password", "ERR_WRONG_USR"
+		  "Username must be at least 4 characters long", "ERR_INV_USR"
+		  "Username must be shroter than 15 characters", "ERR_INV_USR"
+		  "Username contains invalid characters", "ERR_INV_USR"
+		  "Invalid Authorization Code", "ERR_INV_AUTH"
+
+3. api/Users/LogoutUser
+	INPUT usr = {"sessionId":"pesho"};
+	OUTPUT {"status":"Successfully logged out"};
+	ERROR "Invalid username", "ERR_WRONG_USR"
+
+4. api/users/EditUserInfo - 
+	INPUT usr = {"sessionId" : "sessionId",	"firstName" : "Admin",	"lastName" : "Admin",	"email": "email@gmail.com"	};
+	OUTPUT {"sessionId" : "id"};
+	ERROR "Username must be at least 4 characters long", "ERR_INV_USR"
+		  "Username must be shroter than 15 characters", "ERR_INV_USR"
+		  "Username contains invalid characters", "ERR_INV_USR"
+		  "First Name Cannot Be Empty", "ERR_INV_FNM"
+		  "First Name Cannot Be Less than 2 symbols long", "ERR_INV_FNM"
+		  "Last Name Cannot Be Empty", "ERR_INV_LNM"
+		  "Last Name Cannot Be Less than 2 symbols long", "ERR_INV_FNM"
+		  "Invalid Email Used", "ERR_INV_EML"
+
+
+6. api/Trainings/MarkTrainingCompleted - set a training as completed
+	INPUT:
+			var usr = {"sessionId" : "pesho", "trainingId" : "3"};
+	OUTPUT:
+	ERROR: "No such training ID", "ERR_ID"
+		   "The selected training has already been marked as trained", "ERR_ID"
+
+7. api/Trainings/GetTrainingsByUser - return list of all trainings by user
+	INPUT: 
+			var usr = {"sessionId" : "pesho"};
+	OUTPUT:
+			{ CompletedTrainings: [{Id:1, Title:Title1, Text:Text1}, {Id:2, Title:Title2, Text:Text2}, {Id:3, Title:Title3, Text:Text3}]
+							0: {Id:1, Title:Title1, Text:Text1}
+							1: {Id:2, Title:Title2, Text:Text2}
+							2: {Id:3, Title:Title3, Text:Text3}
+			UncompletedTrainings: [{Id:4, Title:Title4, Text:Text4}]
+							0: {Id:4, Title:Title4, Text:Text4} }
+
+9. api/Trainings/GetTrainingInfo - return info about training
+	INPUT:
+			var usr = {"sessionId" : "pesho", "trainingId" : "10"};
+	OUTPUT: 
+			Id: 1
+			Text: "Text1"
+			Title: "Title1"
+	ERROR: "No such training ID", "ERR_ID" 
+
+28. api/Tasks/AddCustomTask - add custom task to user (after that he can use it in the calendar)
+	INPUT	usr =  { "sessionId":"pesho", "name" : "custom task" , "description" : "description for the custom task"};
+	OUTPUT
+	ERROR	"Description too short (minimum 4 symbols)", "ERR_DESC"
+			"Description too long (maximum 500 symbols)", "ERR_DESC"
+			"Name Too Long", "ERR_NAME"
+			"Name can not be empty", "ERR_NAME_EMP"
+			"Name too short (minimum 4 symbols)", "ERR_NAME"
+			"Name too long (maximum 50 symbols)", "ERR_NAME"
+
+10. api/Tasks/GetDailyTasksByUser - return list of daily tasks for today by user
+	INPUT	usr = {"sessionId" : "pesho"};
+	OUTPUT	{ CompletedTasks: [{Name:Task, Description:SimpleTask, TaskId:1, DateAdded:2013-04-10T13:56:31.74}]
+			UncompletedTasks: [{Name: custom task 1, Description:description for the custom task, TaskId:2,…},…] }
+	ERROR: "Invalid SessionId", "ERR_INV_AUTH"
+
+11.api/Tasks/MarkTaskCompleted
+	INPUT usr = {"taskId" : "1","sessionId":"pesho"};
+	OUTPUT
+	ERROR "Invalid SessionId", "ERR_INV_AUTH" 
+		  "No such task ID", "ERR_ID"
+		
+12.api/Tasks/AddTaskForUser
+	INPUT usr = {"sessionId" : "pesho", "taskId" : "2", "date" : "4/17/2013"};
+	OUTPUT
+	ERROR "Invalid task ID", "ERR_TSK_ID"
+		  "No task with this ID", "ERR_TSK_ID"
+
+13.api/Tasks/GetTaskInfo - gets JSON object
+	INPUT usr = {"sessionId" : "pesho", "taskId" : "1"};
+	OUTPUT {"Name":"Task","Description":"SimpleTask","UserId":1,"DateAdded":"2013-04-10T13:56:31.74"}
+	ERROR "No such task ID", "ERR_ID"
+
+
+14.api/Tasks/GetTasksByDate
+	INPUT usr = {"sessionId" : "pesho", "date" : "4/11/2013"};
+	OUTPUT  CompletedTasks: [{Name:Task, Description:SimpleTask, TaskId:1, DateAdded:2013-04-10T13:56:31.74}]
+				0: {Name:Task, Description:SimpleTask, TaskId:1, DateAdded:2013-04-10T13:56:31.74}
+			UncompletedTasks: [{Name: custom task 1, Description:description for the custom task, TaskId:2,…},…]
+				0: {Name: custom task 1, Description:description for the custom task, TaskId:2,…}
+				1: {Name:custom task 2, Description:description for the custom task, TaskId:3,…}
+				2: {Name:custom task 3, Description:desk 3, TaskId:4, DateAdded:2013-04-11T13:51:18.167}
+	ERROR "Invalid SessionId", "ERR_INV_AUTH"
+		  "Invalid date", "ERR_DATE"
+
+15.api/Assets/GetCurrentAssetsListByUser - return all assets by user
+	INPUT		usr = {"sessionId" : "pesho"};
+	OUTPUT		0: {UsersId:1, AssetId:3, Asset:Kokoshka, CurrentQuantity:5}
+					Asset: "Kokoshka"
+					AssetId: 3
+					CurrentQuantity: 5
+					UsersId: 1
+				1: {UsersId:1, AssetId:4, Asset:Patka, CurrentQuantity:10}
+					Asset: "Patka"
+					AssetId: 4
+					CurrentQuantity: 10
+					UsersId: 1
+	ERROR		"No Assets by user", "ERR_NO_AS"
+		
+16.api/Assets/GetAssetInfo - return information about asset by id
+	INPUT		usr = {"assetId" : "3"};
+	OUTPUT		{"Name":"Kokoshka","Description":"Pile","Cost":100.2,"AddedByUser":1}
+	ERROR		"No such task ID", "ERR_ID"
+
+17.api/assets/UpdateAssetHistoryByUser - will update the history and the current assets
+	INPUT		var usr = {"sessionId" : "pesho", "assetId" : "3", "assetStatus" : "ADD", "assetPrice" : "140.50", "assetCount" : "10"};
+					assetStatus - ADD, SELL, LOSE
+	OUTPU		success
+	ERROR		"Invalid Asset Status", "ERR_AS_ST"
+
+19.api/Farm/GetPetInfo - return information about a pet
+	INPUT
+		usr = {"sessionId" : "pesho", "petId" : "5"};
+	OUTPUT
+		Behavior: "bears confinement better than most other game breeds; extremely fierce & pugnacious, but docile & easily handled when away from other cocks; because of aggressiveness, not recommended for a mixed flock"
+		Breed: "Aseel"
+		Brooding: "can be broody, ↵protective mothers"
+		Class: "APA: ↵Large: All Other↵PC: Hard Feather Heavy"
+		Comb: "small pea"
+		Ealobes: "red"
+		EggSize: "productive over short season"
+		EggsColor: "↵lightly↵tinted"
+		Hardness: "hardy, but not feathered for cold winters; very hardy in high heat"
+		Id: 5
+		Links: "http://www.afn.org/~poultry/breeds/aseel.htm,http://www.poultrypages.com/asil.html,http://www.albc-usa.org/cpl/aseel.html,http://www.feathersite.com/Poultry/Games/Asil/BRKAsil.html"
+		Maturing: "slow to mature"
+		Origins: "Developed in India more than 2000 years ago, perhaps even 3500 years ago. Thought to be the breed from which the Cornish was primarily developed."
+		Picture: "http://www.afn.org/~poultry/images/aseel.jpg"
+		Rarity: "Very rare.4% Unchanged since 2003"
+		SkinColor: "yellow skin & shanks"
+		Varieties: "Black, White, Duckwing, Red Spangled, Pyle, others"
+		Weight: "Standard:5 lb/2.2 kg Bantam:2 lb/0.9 kg"
+	ERROR
+		"Invalid pet ID", "ERR_PET_ID"
+
+20.api/Farm/GetPetsList - return list with information about all pets
+	INPUT
+		usr = {"sessionId" : "pesho"};
+	OUTPUT (same as GetPetInfo structure but in array)
+		0: {Id:1, Breed:Ameraucana,…}
+		1: {Id:2, Breed:Ancona, Varieties:Black mottled, only, Rarity:Uncommon. 40% Unchanged since 2003,…}
+	ERROR
+		
+
+21.api/Farm/GetFarmByUser - return information about current user farm
+	INPUT 
+		usr = {"sessionId" : "pesho"};
+	OUTPUT
+		0: {Id:1, PetName:Ancona, Count:20, EggsInStock:50, EggsHatching:20}
+		1: {Id:3, PetName:Sussex, Count:10, EggsInStock:0, EggsHatching:0}
+	ERROR
+
+22.api/Farm/UpdateFarmPetHistoryByUser - proverka na zakonite za jivotnoto dali vhodnite danni sa pozvoleni
+	INPUT action - ADDP, SELLP, LOSEP
+		usr = {"sessionId" : "pesho", "petId": "3", "count" : "20", "price" : "20", "action" : "ADDP"};
+	OUTPUT
+		
+	ERROR
+		"Invalid Pet Farm Action", "ERR_PET_ACT"
+		"Invalid Pet Count", "ERR_PET_PRC"
+		"Can not sell pet you dont have", "ERR_INV_PET"
+		"Can not sell more pets that you have", "ERR_INV_PET"
+
+23.api/Farm/UpdateFarmHatchingHistoryByUser - proverka na zakonite za qjca dali vhodnite danni sa pozvoleni
+	INPUT action - ADDH, SELLH, LOSEH
+		usr = {"sessionId" : "pesho", "petId": "3", "count" : "20", "price" : "20", "action" : "ADDH"};
+	OUTPUT
+		
+	ERROR
+		"Invalid Pet Farm Action", "ERR_PET_ACT"
+		"Invalid Pet Count", "ERR_PET_PRC"
+		"Can not sell pet you dont have", "ERR_INV_PET"
+		"Can not sell more pets that you have", "ERR_INV_PET"
+
+24.api/Farm/UpdateFarmEggsHistoryByUser - TODO - proverka na zakonite za qjca dali vhodnite danni sa pozvoleni
+INPUT action - ADDE, SELLE, LOSEE
+		usr = {"sessionId" : "pesho", "petId": "3", "count" : "20", "price" : "20", "action" : "ADDE"};
+	OUTPUT
+		
+	ERROR
+		"Invalid Eggs Action", "ERR_EGG_ACT"
+		"Invalid Eggs Count", "ERR_EGG_CNT"
+		"Invalid Eggs Price", "ERR_EGG_PRC"
+		"Can not sell eggs of pet you dont have", "ERR_EGG_INV"
+		"Can not sell more eggs than you have", "ERR_HTC_CNT"
+		"Can not lose eggs of pet you dont have", "ERR_HTC_PET"
+		"Can not lose more hatchings eggs that you have", "ERR_HTC_CNT"
+		"Invalid Pet Id", "ERR_PET_ID"
+
+24.api/Law/GetLawInfo
+INPUT 
+		usr = {"sessionId" : "pesho"};
+OUPUT //TODO to be added when test the service and input cleared
+	
+25.api/Finance/GetTotalByUser
+	INPUT
+		usr = {"sessionId" : "pesho"};
+	OUTPUT
+		
+26.api/Calendar/GetDateInfoByUser
+	INPUT
+		ust = {"sessionId" : "pesho", "date" : "4/17/2013"}
+	OUTPUT
+
+	ERROR
